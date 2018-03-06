@@ -1,12 +1,13 @@
-from models.pitcher import Pitcher
-from models.catcher import Catcher
-from models.first import First
-from models.second import Second
-from models.third import Third
-from models.shortstop import Shortstop
-from models.left import Left
-from models.center import Center
-from models.right import Right
+from models.position.position import Center
+from models.position.position import First
+from models.position.position import Left
+from models.position.position import Pitcher
+from models.position.position import Right
+from models.position.position import Second
+from models.position.position import Shortstop
+from models.position.position import Third
+from models.position.position import Catcher
+
 from models.team import Team
 
 

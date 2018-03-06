@@ -1,7 +1,7 @@
-from models.batter import Batter
-from models.on_deck import OnDeck
-from models.in_hole import InHole
-from models.pitcher import Pitcher
+from models.position.position import Batter
+from models.position.position import InHole
+from models.position.position import OnDeck
+from models.position.position import Pitcher
 from models.team import Team
 
 
