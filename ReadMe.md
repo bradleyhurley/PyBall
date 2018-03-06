@@ -1,6 +1,6 @@
 ## PyBall - A MLB.com Stats API Python Client
 
-[![Build Status](https://travis-ci.org/a-hacker/PyBall.svg?branch=master)](https://travis-ci.org/a-hacker/PyBall)
+[![Build Status](https://travis-ci.org/bradleyhurley/PyBall.svg?branch=master)](https://travis-ci.org/bradleyhurley/PyBall)
 
 
 ```python
