@@ -5,6 +5,8 @@ from models.config.game_types import GameType
 from models.people import People
 from models.venue import Venue
 
+from error_parser import ErrorParser
+
 from models.config.languages import Languages
 from models.config.league_leader_types import LeagueLeaderTypes
 from models.config.metrics import Metrics
