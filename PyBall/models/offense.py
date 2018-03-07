@@ -1,8 +1,8 @@
-from models.position.position import Batter
-from models.position.position import InHole
-from models.position.position import OnDeck
-from models.position.position import Pitcher
-from models.team import Team
+from PyBall.models.position.position import Batter
+from PyBall.models.position.position import InHole
+from PyBall.models.position.position import OnDeck
+from PyBall.models.position.position import Pitcher
+from PyBall.models.team import Team
 
 
 class Offense:

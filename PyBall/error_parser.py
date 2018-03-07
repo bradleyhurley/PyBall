@@ -1,4 +1,4 @@
-from exceptions import *
+from PyBall.exceptions import *
 
 
 class ErrorParser:

@@ -1,8 +1,8 @@
 import pytest
-from PyBall import PyBall
-from models.divisions.division import Division
+from PyBall.PyBall import PyBall
+from PyBall.models.divisions.division import Division
 
-from exceptions import *
+from PyBall.exceptions import *
 
 
 @pytest.fixture(scope='module')

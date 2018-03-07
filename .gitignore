@@ -1,4 +1,6 @@
 __pycache__/
 *.pyc
 *.idea
+build/
+PyBall.egg-info/
 .pytest_cache/

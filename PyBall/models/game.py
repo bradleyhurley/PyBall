@@ -1,7 +1,7 @@
-from models.team import Team
-from models.defense import Defense
-from models.offense import Offense
-from models.innings import Innings
+from PyBall.models.team import Team
+from PyBall.models.defense import Defense
+from PyBall.models.offense import Offense
+from PyBall.models.innings import Innings
 
 
 class Game:

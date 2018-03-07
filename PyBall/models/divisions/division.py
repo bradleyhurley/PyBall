@@ -1,5 +1,5 @@
-from models.league import League
-from models.sport import Sport
+from PyBall.models.league import League
+from PyBall.models.sport import Sport
 
 
 class Division:
