@@ -10,8 +10,18 @@ def test_division():
     pyball = PyBall()
     return pyball.get_division_by_id(201)
 
+@pytest.fixture(scope='module')
+def test_divisions():
+    pyball = PyBall()
+    return pyball.get_divisions()
 
-def test_get_venue_endpoint_returns_venue(test_division):
+
+def test_get_divisions_returns_divisions(test_divisions):
+    assert isinstance(test_divisions, list)
+    assert isinstance(test_divisions[0], Division)
+
+
+def test_get_division_returns_division(test_division):
     assert isinstance(test_division, Division)
 
 
