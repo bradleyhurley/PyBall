@@ -43,76 +43,49 @@ class PyBall:
         pass
 
     def get_game_types(self):
-        game_types = []
         url = "{0}/gameTypes".format(BASE_URL)
         results = self._get(url)
-        for game_type in results:
-            game_types.append(GameType(**game_type))
-        return game_types
+        return [GameType(**game_type) for game_type in results]
 
     def get_languages(self):
-        languages = []
         url = "{0}/languages".format(BASE_URL)
         results = self._get(url)
-        for lang in results:
-            languages.append(Languages(**lang))
-        return languages
+        return [Languages(**lang) for lang in results]
 
     def get_league_leader_types(self):
-        leader_types = []
         url = "{0}/leagueLeaderTypes".format(BASE_URL)
         results = self._get(url)
-        for leader_type in results:
-            leader_types.append(LeagueLeaderTypes(**leader_type))
-        return leader_types
+        return [LeagueLeaderTypes(**leader_type) for leader_type in results]
 
     def get_metrics(self):
-        metrics = []
         url = "{0}/metrics".format(BASE_URL)
         results = self._get(url)
-        for metric in results:
-            metrics.append(Metrics(**metric))
-        return metrics
+        return [Metrics(**metric) for metric in results]
 
     def get_platforms(self):
-        platforms = []
         url = "{0}/platforms".format(BASE_URL)
         results = self._get(url)
-        for platform in results:
-            platforms.append(Platform(**platform))
-        return platforms
+        return [Platform(**platform) for platform in results]
 
     def get_positions(self):
-        positions = []
         url = "{0}/positions".format(BASE_URL)
         results = self._get(url)
-        for position in results:
-            positions.append(Positions(**position))
-        return positions
+        return [Positions(**position) for position in results]
 
     def get_roster_types(self):
-        roster_types = []
         url = "{0}/rosterTypes".format(BASE_URL)
         results = self._get(url)
-        for roster_type in results:
-            roster_types.append(RosterTypes(**roster_type))
-        return roster_types
+        return [RosterTypes(**roster_type) for roster_type in results]
 
     def get_schedule_event_types(self):
-        schedule_event_types = []
         url = "{0}/scheduleEventTypes".format(BASE_URL)
         results = self._get(url)
-        for schedule_event_type in results:
-            schedule_event_types.append(ScheduleEventTypes(**schedule_event_type))
-        return schedule_event_types
+        return [ScheduleEventTypes(**schedule_event_type) for schedule_event_type in results]
 
     def get_situation_codes(self):
-        situation_codes = []
         url = "{0}/situationCodes".format(BASE_URL)
         results = self._get(url)
-        for situation_code in results:
-            situation_codes.append(SituationCodes(**situation_code))
-        return situation_codes
+        return [SituationCodes(**situation_code) for situation_code in results]
 
     def get_stats_groups(self):
         pass
@@ -121,12 +94,9 @@ class PyBall:
         pass
 
     def get_divisions(self):
-        divisions = []
         url = "{0}/divisions".format(BASE_URL)
         results = self._get(url)
-        for division in results:
-            divisions.append(Division(**division))
-        return divisions
+        return [Division(**division) for division in results['divisions']]
 
     def get_division_by_id(self, division_id):
         url = "{0}/divisions/{1}".format(BASE_URL, division_id)
