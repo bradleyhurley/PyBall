@@ -3,3 +3,4 @@ __pycache__/
 *.idea
 build/
 PyBall.egg-info/
+.pytest_cache/

@@ -16,6 +16,8 @@ from PyBall.models.config.roster_types import RosterTypes
 from PyBall.models.config.schedule_event_types import ScheduleEventTypes
 from PyBall.models.config.situation_codes import SituationCodes
 
+from PyBall.models.divisions.division import Division
+
 
 class PyBall:
     def __init__(self):
@@ -117,3 +119,16 @@ class PyBall:
 
     def get_stats_type(self):
         pass
+
+    def get_divisions(self):
+        divisions = []
+        url = "{0}/divisions".format(BASE_URL)
+        results = self._get(url)
+        for division in results:
+            divisions.append(Division(**division))
+        return divisions
+
+    def get_division_by_id(self, division_id):
+        url = "{0}/divisions/{1}".format(BASE_URL, division_id)
+        results = self._get(url)
+        return Division(**results['divisions'][0])
