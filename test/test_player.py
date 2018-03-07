@@ -1,8 +1,8 @@
 import pytest
-from PyBall import PyBall
-from models.people import People
+from PyBall.PyBall import PyBall
+from PyBall.models.people import People
 
-from exceptions import *
+from PyBall.exceptions import *
 
 
 @pytest.fixture(scope='module')

@@ -1,6 +1,7 @@
-from models.sport import Sport
-from models.league import League
-from models.venue import Venue
+from PyBall.models.sport import Sport
+from PyBall.models.league import League
+from PyBall.models.venue import Venue
+
 
 class Team:
     def __init__(self, id=None, name=None, link=None, teamCode=None, fileCode=None, abbreviation=None, teamName=None,

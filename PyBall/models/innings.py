@@ -1,4 +1,4 @@
-from models.inning import Inning
+from PyBall.models.inning import Inning
 
 
 class Innings:

@@ -1,6 +1,8 @@
-from models.pitch_hand import PitchHand
-from models.bat_side import BatSide
-from models.primary_position import PrimaryPostion
+from PyBall.models.pitch_hand import PitchHand
+from PyBall.models.bat_side import BatSide
+from PyBall.models.primary_position import PrimaryPostion
+
+
 class People:
     def __init__(self, id=None, fullName=None, link=None, firstName=None, lastName=None, primaryNumber=None,
                  birthDate=None, currentAge=None, birthCity=None, birthStateProvince=None, birthCountry=None,

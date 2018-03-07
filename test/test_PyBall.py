@@ -1,4 +1,4 @@
-from PyBall import PyBall
+from PyBall.PyBall import PyBall
 
 
 def main():

@@ -1,8 +1,8 @@
 import pytest
-from PyBall import PyBall
-from models.config.game_types import GameType
+from PyBall.PyBall import PyBall
+from PyBall.models.config.game_types import GameType
 
-from exceptions import *
+from PyBall.exceptions import *
 
 @pytest.fixture(scope='module')
 def test_game_type():

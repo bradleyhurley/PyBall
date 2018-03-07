@@ -1,20 +1,20 @@
 import requests
 
-from constants import BASE_URL
-from models.config.game_types import GameType
-from models.people import People
-from models.venue import Venue
+from PyBall.constants import BASE_URL
+from PyBall.models.config.game_types import GameType
+from PyBall.models.people import People
+from PyBall.models.venue import Venue
 
-from error_parser import ErrorParser
+from PyBall.error_parser import ErrorParser
 
-from models.config.languages import Languages
-from models.config.league_leader_types import LeagueLeaderTypes
-from models.config.metrics import Metrics
-from models.config.platform import Platform
-from models.config.positions import Positions
-from models.config.roster_types import RosterTypes
-from models.config.schedule_event_types import ScheduleEventTypes
-from models.config.situation_codes import SituationCodes
+from PyBall.models.config.languages import Languages
+from PyBall.models.config.league_leader_types import LeagueLeaderTypes
+from PyBall.models.config.metrics import Metrics
+from PyBall.models.config.platform import Platform
+from PyBall.models.config.positions import Positions
+from PyBall.models.config.roster_types import RosterTypes
+from PyBall.models.config.schedule_event_types import ScheduleEventTypes
+from PyBall.models.config.situation_codes import SituationCodes
 
 
 class PyBall:

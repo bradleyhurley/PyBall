@@ -1,8 +1,8 @@
 import pytest
-from PyBall import PyBall
-from models.venue import Venue
+from PyBall.PyBall import PyBall
+from PyBall.models.venue import Venue
 
-from exceptions import *
+from PyBall.exceptions import *
 
 
 @pytest.fixture(scope='module')
