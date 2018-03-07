@@ -6,7 +6,6 @@ from models.people import People
 from models.venue import Venue
 
 from error_parser import ErrorParser
-
 from models.config.languages import Languages
 from models.config.league_leader_types import LeagueLeaderTypes
 from models.config.metrics import Metrics
@@ -15,6 +14,8 @@ from models.config.positions import Positions
 from models.config.roster_types import RosterTypes
 from models.config.schedule_event_types import ScheduleEventTypes
 from models.config.situation_codes import SituationCodes
+
+from models.divisions.division import Division
 
 
 class PyBall:
@@ -117,3 +118,16 @@ class PyBall:
 
     def get_stats_type(self):
         pass
+
+    def get_divisions(self):
+        divisions = []
+        url = "{0}/divisions".format(BASE_URL)
+        results = self._get(url)
+        for division in results:
+            divisions.append(Division(**division))
+        return divisions
+
+    def get_division_by_id(self, division_id):
+        url = "{0}/divisions/{1}".format(BASE_URL, division_id)
+        results = self._get(url)
+        return Division(**results['divisions'][0])
