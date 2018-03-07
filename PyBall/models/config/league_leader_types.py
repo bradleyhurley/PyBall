@@ -1,4 +1,4 @@
-from models.config.valid_sports import ValidSports
+from PyBall.models.config.valid_sports import ValidSports
 
 
 class LeagueLeaderTypes:

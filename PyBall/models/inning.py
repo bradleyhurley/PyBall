@@ -1,5 +1,5 @@
-from models.away import Away
-from models.home import Home
+from PyBall.models.away import Away
+from PyBall.models.home import Home
 
 
 class Inning:
