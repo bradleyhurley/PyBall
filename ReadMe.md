@@ -4,7 +4,7 @@
 
 
 ```python
-from PyBall import PyBall
+from PyBall.PyBall import PyBall
 
 
 def main():
@@ -19,4 +19,4 @@ if __name__ == '__main__':
     main()
 
 ```
-##### This is very much in beta.
+##### This is very much in ~~beta~~ alpha.
