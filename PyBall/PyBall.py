@@ -1,20 +1,20 @@
 import requests
 
 from PyBall.constants import BASE_URL
-from PyBall.models.config.game_types import GameType
+from PyBall.models.config.game_type import GameType
 from PyBall.models.people import People
 from PyBall.models.venue import Venue
 
 from PyBall.error_parser import ErrorParser
 
-from PyBall.models.config.languages import Languages
-from PyBall.models.config.league_leader_types import LeagueLeaderTypes
-from PyBall.models.config.metrics import Metrics
+from PyBall.models.config.language import Language
+from PyBall.models.config.league_leader_type import LeagueLeaderType
+from PyBall.models.config.metric import Metric
 from PyBall.models.config.platform import Platform
-from PyBall.models.config.positions import Positions
-from PyBall.models.config.roster_types import RosterTypes
-from PyBall.models.config.schedule_event_types import ScheduleEventTypes
-from PyBall.models.config.situation_codes import SituationCodes
+from PyBall.models.config.position import Position
+from PyBall.models.config.roster_type import RosterType
+from PyBall.models.config.schedule_event_type import ScheduleEventType
+from PyBall.models.config.situation_code import SituationCode
 
 from PyBall.models.divisions.division import Division
 
@@ -50,17 +50,17 @@ class PyBall:
     def get_languages(self):
         url = "{0}/languages".format(BASE_URL)
         results = self._get(url)
-        return [Languages(**lang) for lang in results]
+        return [Language(**lang) for lang in results]
 
     def get_league_leader_types(self):
         url = "{0}/leagueLeaderTypes".format(BASE_URL)
         results = self._get(url)
-        return [LeagueLeaderTypes(**leader_type) for leader_type in results]
+        return [LeagueLeaderType(**leader_type) for leader_type in results]
 
     def get_metrics(self):
         url = "{0}/metrics".format(BASE_URL)
         results = self._get(url)
-        return [Metrics(**metric) for metric in results]
+        return [Metric(**metric) for metric in results]
 
     def get_platforms(self):
         url = "{0}/platforms".format(BASE_URL)
@@ -70,22 +70,22 @@ class PyBall:
     def get_positions(self):
         url = "{0}/positions".format(BASE_URL)
         results = self._get(url)
-        return [Positions(**position) for position in results]
+        return [Position(**position) for position in results]
 
     def get_roster_types(self):
         url = "{0}/rosterTypes".format(BASE_URL)
         results = self._get(url)
-        return [RosterTypes(**roster_type) for roster_type in results]
+        return [RosterType(**roster_type) for roster_type in results]
 
     def get_schedule_event_types(self):
         url = "{0}/scheduleEventTypes".format(BASE_URL)
         results = self._get(url)
-        return [ScheduleEventTypes(**schedule_event_type) for schedule_event_type in results]
+        return [ScheduleEventType(**schedule_event_type) for schedule_event_type in results]
 
     def get_situation_codes(self):
         url = "{0}/situationCodes".format(BASE_URL)
         results = self._get(url)
-        return [SituationCodes(**situation_code) for situation_code in results]
+        return [SituationCode(**situation_code) for situation_code in results]
 
     def get_stats_groups(self):
         pass
