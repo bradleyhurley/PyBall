@@ -18,6 +18,8 @@ from PyBall.models.config.situation_code import SituationCode
 
 from PyBall.models.divisions.division import Division
 
+from PyBall.models.conference.conference import Conference
+
 
 class PyBall:
     def __init__(self):
@@ -102,3 +104,13 @@ class PyBall:
         url = "{0}/divisions/{1}".format(BASE_URL, division_id)
         results = self._get(url)
         return Division(**results['divisions'][0])
+
+    def get_conferences(self):
+        url = "{0}/conferences/".format(BASE_URL)
+        results = self._get(url)
+        return [Conference(**conference) for conference in results['conferences']]
+
+    def get_conference_by_id(self, conference_id):
+        url = "{0}/conferences/{1}".format(BASE_URL, conference_id)
+        results = self._get(url)
+        return Conference(**results['conferences'][0])
