@@ -3,7 +3,8 @@ from PyBall.models.league import League
 
 
 class Conference:
-    def __init__(self, id=None, link=None, name=None, abbreviation=None, hasWildcard=None, nameShort=None, league=None, sport=None):
+    def __init__(self, id=None, link=None, name=None, abbreviation=None, hasWildcard=None,
+                 nameShort=None, league=None, sport=None):
         self.id = id
         self.link = link
         self.name = name

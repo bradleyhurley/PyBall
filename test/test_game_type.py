@@ -3,7 +3,6 @@ from PyBall.PyBall import PyBall
 from PyBall.models.config.game_type import GameType
 
 
-
 @pytest.fixture(scope='module')
 def test_game_type():
     pyball = PyBall()
