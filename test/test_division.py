@@ -10,6 +10,7 @@ def test_division():
     pyball = PyBall()
     return pyball.get_division_by_id(201)
 
+
 @pytest.fixture(scope='module')
 def test_divisions():
     pyball = PyBall()

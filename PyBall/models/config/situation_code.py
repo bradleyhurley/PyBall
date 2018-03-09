@@ -1,4 +1,4 @@
-class SituationCodes:
+class SituationCode:
     def __init__(self, code=None, sortOrder=None, navigationMenu=None, description=None, team=None, batting=None,
                  fielding=None):
         self.code = code

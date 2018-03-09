@@ -1,6 +1,6 @@
 import pytest
 from PyBall.PyBall import PyBall
-from PyBall.models.config.languages import Languages
+from PyBall.models.config.language import Language
 
 from PyBall.exceptions import *
 
@@ -13,4 +13,4 @@ def test_languages():
 
 def test_get_languages_returns_languages(test_languages):
     assert isinstance(test_languages, list)
-    assert isinstance(test_languages[0], Languages)
+    assert isinstance(test_languages[0], Language)
