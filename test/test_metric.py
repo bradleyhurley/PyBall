@@ -1,6 +1,6 @@
 import pytest
 from PyBall.PyBall import PyBall
-from PyBall.models.config.metrics import Metrics
+from PyBall.models.config.metric import Metric
 
 from PyBall.exceptions import *
 
@@ -13,4 +13,4 @@ def test_metrics():
 
 def test_get_metrics_returns_metrics(test_metrics):
     assert isinstance(test_metrics, list)
-    assert isinstance(test_metrics[0], Metrics)
+    assert isinstance(test_metrics[0], Metric)
