@@ -2,8 +2,6 @@ import pytest
 from PyBall.PyBall import PyBall
 from PyBall.models.config.situation_code import SituationCode
 
-from PyBall.exceptions import *
-
 
 @pytest.fixture(scope='module')
 def test_situation_codes():

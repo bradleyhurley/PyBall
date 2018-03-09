@@ -2,8 +2,6 @@ import pytest
 from PyBall.PyBall import PyBall
 from PyBall.models.config.league_leader_type import LeagueLeaderType
 
-from PyBall.exceptions import *
-
 
 @pytest.fixture(scope='module')
 def test_league_leader_types():

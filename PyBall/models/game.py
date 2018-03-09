@@ -5,9 +5,9 @@ from PyBall.models.innings import Innings
 
 
 class Game:
-    def __init__(self, currentInning=None, currentInningOrdinal=None, inningHalf=None, isTopInning=None,
-                 scheduledInnings=None, innings=None, teams=None, defense=None, offense=None, balls=None, strikes=None,
-                 outs=None):
+    def __init__(self, currentInning=None, currentInningOrdinal=None, inningHalf=None,
+                 isTopInning=None, scheduledInnings=None, innings=None, teams=None, defense=None,
+                 offense=None, balls=None, strikes=None, outs=None):
         self.currentInning = currentInning
         self.currentInningOrdinal = currentInningOrdinal
         self.inningHalf = inningHalf

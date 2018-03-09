@@ -2,8 +2,6 @@ import pytest
 from PyBall.PyBall import PyBall
 from PyBall.models.config.schedule_event_type import ScheduleEventType
 
-from PyBall.exceptions import *
-
 
 @pytest.fixture(scope='module')
 def test_schedule_event_types():

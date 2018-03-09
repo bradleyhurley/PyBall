@@ -4,12 +4,13 @@ from PyBall.models.primary_position import PrimaryPostion
 
 
 class People:
-    def __init__(self, id=None, fullName=None, link=None, firstName=None, lastName=None, primaryNumber=None,
-                 birthDate=None, currentAge=None, birthCity=None, birthStateProvince=None, birthCountry=None,
-                 height=None, weight=None, active=None, useName=None, middleName=None, boxscoreName=None, nickName=None,
-                 draftYear=None, mlbDebutDate=None, nameFirstLast=None, nameSlug=None, firstLastName=None,
-                 lastFirstName=None, lastInitName=None, initLastName=None, fullFMLName=None, fullLFMName=None,
-                 pitchHand=None, primaryPosition=None, batSide=None):
+    def __init__(self, id=None, fullName=None, link=None, firstName=None, lastName=None,
+                 primaryNumber=None, birthDate=None, currentAge=None, birthCity=None,
+                 birthStateProvince=None, birthCountry=None, height=None, weight=None, active=None,
+                 useName=None, middleName=None, boxscoreName=None, nickName=None, draftYear=None,
+                 mlbDebutDate=None, nameFirstLast=None, nameSlug=None, firstLastName=None,
+                 lastFirstName=None, lastInitName=None, initLastName=None, fullFMLName=None,
+                 fullLFMName=None, pitchHand=None, primaryPosition=None, batSide=None):
         self.id = id
         self.fullName = fullName
         self.link = link

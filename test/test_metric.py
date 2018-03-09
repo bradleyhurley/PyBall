@@ -2,8 +2,6 @@ import pytest
 from PyBall.PyBall import PyBall
 from PyBall.models.config.metric import Metric
 
-from PyBall.exceptions import *
-
 
 @pytest.fixture(scope='module')
 def test_metrics():
