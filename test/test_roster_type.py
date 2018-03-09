@@ -2,8 +2,6 @@ import pytest
 from PyBall.PyBall import PyBall
 from PyBall.models.config.roster_type import RosterType
 
-from PyBall.exceptions import *
-
 
 @pytest.fixture(scope='module')
 def test_roster_types():

@@ -2,7 +2,7 @@ import pytest
 from PyBall.PyBall import PyBall
 from PyBall.models.conference.conference import Conference
 
-from PyBall.exceptions import *
+from PyBall.exceptions import BadRequestError
 
 
 @pytest.fixture(scope='module')

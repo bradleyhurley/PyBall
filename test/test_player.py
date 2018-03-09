@@ -2,7 +2,7 @@ import pytest
 from PyBall.PyBall import PyBall
 from PyBall.models.people import People
 
-from PyBall.exceptions import *
+from PyBall.exceptions import InvalidIdError, BadRequestError
 
 
 @pytest.fixture(scope='module')

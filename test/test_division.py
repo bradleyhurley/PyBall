@@ -2,7 +2,7 @@ import pytest
 from PyBall.PyBall import PyBall
 from PyBall.models.divisions.division import Division
 
-from PyBall.exceptions import *
+from PyBall.exceptions import BadRequestError
 
 
 @pytest.fixture(scope='module')

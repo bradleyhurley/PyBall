@@ -12,8 +12,8 @@ from PyBall.models.team import Team
 
 
 class Defense:
-    def __init__(self, pitcher=None, catcher=None, first=None, second=None, third=None, shortstop=None, left=None,
-                 center=None, right=None, team=None):
+    def __init__(self, pitcher=None, catcher=None, first=None, second=None, third=None,
+                 shortstop=None, left=None, center=None, right=None, team=None):
         self.pitcher = Pitcher(**pitcher)
         self.catcher = Catcher(**catcher)
         self.first = First(**first)
