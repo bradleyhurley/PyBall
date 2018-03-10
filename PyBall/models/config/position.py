@@ -1,6 +1,6 @@
-class Positions:
-    def __init__(self, shortName=None, fullName=None, abbrev=None, code=None, type=None, pitcher=None, fielder=None,
-                 outfield=None, displayName=None):
+class Position:
+    def __init__(self, shortName=None, fullName=None, abbrev=None, code=None, type=None,
+                 pitcher=None, fielder=None, outfield=None, displayName=None):
         self.shortName = shortName
         self.fullName = fullName
         self.abbrev = abbrev

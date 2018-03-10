@@ -4,9 +4,9 @@ from PyBall.models.draft.person import Person
 
 
 class Prospect:
-    def __init__(self, bisPlayerId=None, draftPlayerId=None, pickRound=None, pickNumber=None, rank=None,
-                 pickedTeamCode=None, home=None, scoutingReport=None, school=None, comments=None, person=None,
-                 photoFlag=None):
+    def __init__(self, bisPlayerId=None, draftPlayerId=None, pickRound=None, pickNumber=None,
+                 rank=None, pickedTeamCode=None, home=None, scoutingReport=None, school=None,
+                 comments=None, person=None, photoFlag=None):
         self.bisPlayerId = bisPlayerId
         self.draftPlayerId = draftPlayerId
         self.pickRound = pickRound

@@ -20,7 +20,8 @@ with open(path.join(here, 'ReadMe.md'), encoding='utf-8') as f:
 
 dependencies = [
         'requests',
-        'pytest'
+        'pytest',
+        'flake8'
     ]
 
 

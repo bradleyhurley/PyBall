@@ -8,7 +8,7 @@ from PyBall.models.draft.home import Home
 from PyBall.models.draft.school import School
 from PyBall.models.draft.person import Person
 
-from PyBall.exceptions import *
+from PyBall.exceptions import BadRequestError
 
 
 @pytest.fixture(scope='module')

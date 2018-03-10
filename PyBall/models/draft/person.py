@@ -4,8 +4,9 @@ from PyBall.models.primary_position import PrimaryPostion
 
 
 class Person:
-    def __init__(self, id=None, fullName=None, link=None, firstName=None, lastName=None, birthDate=None,
-                 birthCountry=None, primaryPosition=None, batSide=None, pitchHand=None, nameSlug=None):
+    def __init__(self, id=None, fullName=None, link=None, firstName=None, lastName=None,
+                 birthDate=None, birthCountry=None, primaryPosition=None, batSide=None,
+                 pitchHand=None, nameSlug=None):
         self.id = id
         self.fullName = fullName
         self.link = link

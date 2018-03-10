@@ -1,8 +1,6 @@
 import pytest
 from PyBall.PyBall import PyBall
-from PyBall.models.config.roster_types import RosterTypes
-
-from PyBall.exceptions import *
+from PyBall.models.config.roster_type import RosterType
 
 
 @pytest.fixture(scope='module')
@@ -13,4 +11,4 @@ def test_roster_types():
 
 def test_get_roster_types_returns_roster_types(test_roster_types):
     assert isinstance(test_roster_types, list)
-    assert isinstance(test_roster_types[0], RosterTypes)
+    assert isinstance(test_roster_types[0], RosterType)
