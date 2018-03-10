@@ -1,4 +1,5 @@
 import requests
+from datetime import datetime
 
 from PyBall.constants import BASE_URL
 from PyBall.models.config.game_type import GameType
@@ -16,9 +17,12 @@ from PyBall.models.config.roster_type import RosterType
 from PyBall.models.config.schedule_event_type import ScheduleEventType
 from PyBall.models.config.situation_code import SituationCode
 
-from PyBall.models.divisions.division import Division
+from PyBall.models.divisions import Division
 
-from PyBall.models.conference.conference import Conference
+from PyBall.models.conference import Conference
+
+from PyBall.models.draft import Draft
+from PyBall.models.draft import Prospect
 
 
 class PyBall:
@@ -114,3 +118,13 @@ class PyBall:
         url = "{0}/conferences/{1}".format(BASE_URL, conference_id)
         results = self._get(url)
         return Conference(**results['conferences'][0])
+
+    def get_draft_by_year(self, year=datetime.now().year - 1):
+        url = "{0}/draft/{1}".format(BASE_URL, year)
+        results = self._get(url)
+        return Draft(**results['drafts'][0])
+
+    def get_draft_prospects_by_year(self, year=datetime.now().year - 1):
+        url = "{0}/draft/prospects/{1}".format(BASE_URL, year)
+        results = self._get(url)
+        return [Prospect(**prospect) for prospect in results['prospects']]

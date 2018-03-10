@@ -1,6 +1,6 @@
 import pytest
-from PyBall.PyBall import PyBall
-from PyBall.models.people import People
+from PyBall import PyBall
+from PyBall.models import People
 
 from PyBall.exceptions import InvalidIdError, BadRequestError
 

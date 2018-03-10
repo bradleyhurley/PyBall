@@ -1,6 +1,6 @@
 import pytest
-from PyBall.PyBall import PyBall
-from PyBall.models.config.roster_type import RosterType
+from PyBall import PyBall
+from PyBall.models.config import RosterType
 
 
 @pytest.fixture(scope='module')

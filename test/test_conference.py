@@ -1,6 +1,6 @@
 import pytest
-from PyBall.PyBall import PyBall
-from PyBall.models.conference.conference import Conference
+from PyBall import PyBall
+from PyBall.models.conference import Conference
 
 from PyBall.exceptions import BadRequestError
 
