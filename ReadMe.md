@@ -4,7 +4,7 @@
 
 
 ```python
-from PyBall.PyBall import PyBall
+import PyBall
 
 
 def main():
