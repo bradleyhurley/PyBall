@@ -1,6 +1,6 @@
 import pytest
-from PyBall.PyBall import PyBall
-from PyBall.models.venue import Venue
+from PyBall import PyBall
+from PyBall.models import Venue
 
 from PyBall.exceptions import BadRequestError, InvalidIdError
 

@@ -1,12 +1,12 @@
 import pytest
-from PyBall.PyBall import PyBall
-from PyBall.models.draft.draft import Draft
-from PyBall.models.draft.prospect import Prospect
-from PyBall.models.draft.round import Round
-from PyBall.models.draft.pick import Pick
-from PyBall.models.draft.home import Home
-from PyBall.models.draft.school import School
-from PyBall.models.draft.person import Person
+from PyBall import PyBall
+from PyBall.models.draft import Draft
+from PyBall.models.draft import Prospect
+from PyBall.models.draft import Round
+from PyBall.models.draft import Pick
+from PyBall.models.draft import Home
+from PyBall.models.draft import School
+from PyBall.models.draft import Person
 
 from PyBall.exceptions import BadRequestError
 

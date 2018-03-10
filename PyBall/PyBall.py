@@ -17,12 +17,12 @@ from PyBall.models.config.roster_type import RosterType
 from PyBall.models.config.schedule_event_type import ScheduleEventType
 from PyBall.models.config.situation_code import SituationCode
 
-from PyBall.models.divisions.division import Division
+from PyBall.models.divisions import Division
 
-from PyBall.models.conference.conference import Conference
+from PyBall.models.conference import Conference
 
-from PyBall.models.draft.draft import Draft
-from PyBall.models.draft.prospect import Prospect
+from PyBall.models.draft import Draft
+from PyBall.models.draft import Prospect
 
 
 class PyBall:

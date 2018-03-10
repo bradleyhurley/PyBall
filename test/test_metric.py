@@ -1,6 +1,6 @@
 import pytest
-from PyBall.PyBall import PyBall
-from PyBall.models.config.metric import Metric
+from PyBall import PyBall
+from PyBall.models.config import Metric
 
 
 @pytest.fixture(scope='module')

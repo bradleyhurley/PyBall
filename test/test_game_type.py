@@ -1,6 +1,6 @@
 import pytest
-from PyBall.PyBall import PyBall
-from PyBall.models.config.game_type import GameType
+from PyBall import PyBall
+from PyBall.models.config import GameType
 
 
 @pytest.fixture(scope='module')

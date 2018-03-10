@@ -1,6 +1,6 @@
 import pytest
-from PyBall.PyBall import PyBall
-from PyBall.models.config.platform import Platform
+from PyBall import PyBall
+from PyBall.models.config import Platform
 
 
 @pytest.fixture(scope='module')
