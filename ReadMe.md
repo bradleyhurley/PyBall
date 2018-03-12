@@ -23,3 +23,9 @@ if __name__ == '__main__':
 
 ```
 ##### This is very much in ~~beta~~ alpha.
+
+## Logging
+
+This library uses logging to alert when the current version of this library does not match the
+MLB.com API. All loggers use _PyBall._ as a naming prefix. Use this to disable logging if you do
+not desire these alerts.
