@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.org/bradleyhurley/PyBall.svg?branch=master)](https://travis-ci.org/bradleyhurley/PyBall)
 
+## API Documentation:
+http://statsapi.mlb.com/docs/#
+
 
 ```python
 import PyBall
