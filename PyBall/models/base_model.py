@@ -25,7 +25,7 @@ class BaseModel(metaclass=BaseModelType):
             raw_value = kwargs.get(name, default_value)
             field_type = self._fields[name]['field_type']
             if issubclass(field_type, BaseModel):
-                value = field_type(raw_value)
+                value = field_type(**raw_value)
             else:
                 value = raw_value
             setattr(self, name, value)
