@@ -1,4 +1,5 @@
 from inspect import Signature, Parameter
+import logging
 
 
 def make_sig(**fields):
@@ -16,6 +17,7 @@ class BaseModelType(type):
 
 class BaseModel(metaclass=BaseModelType):
     _fields = {}
+    log = logging.getLogger("PyBall.models")
 
     def __init__(self, **kwargs):
         for name in self._fields:
@@ -27,3 +29,8 @@ class BaseModel(metaclass=BaseModelType):
             else:
                 value = raw_value
             setattr(self, name, value)
+
+        extra_fields = kwargs.keys() - self._fields.keys()
+        if extra_fields:
+            self.log.warn("Extra fields found: {}. Upgrade PyBall to access new data fields."
+                          .format(', '.join(extra_fields)))
