@@ -7,7 +7,7 @@ http://statsapi.mlb.com/docs/#
 
 
 ```python
-import PyBall
+from PyBall import PyBall
 
 
 def main():
