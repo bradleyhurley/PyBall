@@ -1,5 +1,6 @@
 class League:
-    def __init__(self, id=None, link=None, name=None):
-        self.id = id
-        self.link = link
-        self.name = name
+    _fields = {
+        'id': {'default_value': None, 'field_type': int},
+        'link': {'default_value': None, 'field_type': str},
+        'name': {'default_value': None, 'field_type': str},
+    }
