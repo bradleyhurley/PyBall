@@ -1,5 +1,5 @@
+from PyBall.models import BaseModel
 from PyBall.models.config.valid_sport import ValidSport
-from PyBall.models.base_model import BaseModel
 
 
 class LeagueLeaderType(BaseModel):

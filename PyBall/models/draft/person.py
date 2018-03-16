@@ -1,7 +1,7 @@
+from PyBall.models import BaseModel
 from PyBall.models.pitch_hand import PitchHand
 from PyBall.models.bat_side import BatSide
 from PyBall.models.primary_position import PrimaryPostion
-from PyBall.models.base_model import BaseModel
 
 
 class Person(BaseModel):

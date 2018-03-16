@@ -1,6 +1,6 @@
-from PyBall.models.league import League
-from PyBall.models.sport import Sport
 from PyBall.models.base_model import BaseModel
+from .league import League
+from .sport import Sport
 
 
 class Division(BaseModel):

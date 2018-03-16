@@ -1,6 +1,6 @@
-from PyBall.models.sport import Sport
-from PyBall.models.league import League
 from PyBall.models.base_model import BaseModel
+from .sport import Sport
+from .league import League
 
 
 class Conference(BaseModel):
@@ -10,7 +10,7 @@ class Conference(BaseModel):
         'name': {'default_value': None, 'field_type': str},
         'abbreviation': {'default_value': None, 'field_type': str},
         'hasWildcard': {'default_value': None, 'field_type': bool},
-        'nameShort': {'default_value': {}, 'field_type': str},
+        'nameShort': {'default_value': None, 'field_type': str},
         'league': {'default_value': {}, 'field_type': League},
-        'sport': {'default_value': None, 'field_type': Sport},
+        'sport': {'default_value': {}, 'field_type': Sport},
     }

@@ -1,7 +1,7 @@
+from PyBall.models import BaseModel
 from PyBall.models.draft.home import Home
 from PyBall.models.draft.school import School
 from PyBall.models.draft.person import Person
-from PyBall.models.base_model import BaseModel
 
 
 class Prospect(BaseModel):

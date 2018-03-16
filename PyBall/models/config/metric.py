@@ -1,4 +1,4 @@
-from PyBall.models.base_model import BaseModel
+from PyBall.models import BaseModel
 
 
 class Metric(BaseModel):

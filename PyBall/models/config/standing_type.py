@@ -1,4 +1,8 @@
-class StandingType:
-    def __init__(self, name=None, description=None):
-        self.name = name
-        self.description = description
+from PyBall.models import BaseModel
+
+
+class StandingType(BaseModel):
+    _fields = {
+        'name': {'default_value': None, 'field_type': str},
+        'description': {'default_value': None, 'field_type': str},
+    }

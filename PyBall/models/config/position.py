@@ -1,4 +1,4 @@
-from PyBall.models.base_model import BaseModel
+from PyBall.models import BaseModel
 
 
 class Position(BaseModel):
@@ -8,8 +8,8 @@ class Position(BaseModel):
         'abbrev': {'default_value': None, 'field_type': str},
         'code': {'default_value': None, 'field_type': str},
         'type': {'default_value': None, 'field_type': str},
-        'pitcher': {'default_value': None, 'field_type': bool},
         'outfield': {'default_value': None, 'field_type': bool},
+        'pitcher': {'default_value': None, 'field_type': bool},
         'fielder': {'default_value': None, 'field_type': bool},
         'displayName': {'default_value': None, 'field_type': str},
     }
