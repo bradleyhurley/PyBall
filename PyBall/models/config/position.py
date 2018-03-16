@@ -1,4 +1,4 @@
-from PyBall.models import  BaseModel
+from PyBall.models import BaseModel
 
 
 class Position(BaseModel):

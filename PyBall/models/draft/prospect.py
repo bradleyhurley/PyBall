@@ -6,16 +6,16 @@ from PyBall.models.draft.person import Person
 
 class Prospect(BaseModel):
     _fields = {
-        'person': {'default_value': {}, 'field_type': Person},
         'bisPlayerId': {'default_value': None, 'field_type': int},
         'draftPlayerId': {'default_value': None, 'field_type': int},
-        'pickRound': {'default_value': None, 'field_type': int},
-        'pickNumber': {'default_value': None, 'field_type': int},
-        'rank': {'default_value': None, 'field_type': int},
+        'pickRound': {'default_value': None, 'field_type': float},
+        'pickNumber': {'default_value': None, 'field_type': float},
+        'rank': {'default_value': None, 'field_type': float},
         'pickedTeamCode': {'default_value': None, 'field_type': str},
         'home': {'default_value': {}, 'field_type': Home},
         'scoutingReport': {'default_value': None, 'field_type': str},
-        'photoFlag': {'default_value': None, 'field_type': bool},
         'school': {'default_value': {}, 'field_type': School},
         'comments': {'default_value': None, 'field_type': str},
+        'person': {'default_value': {}, 'field_type': Person},
+        'photoFlag': {'default_value': None, 'field_type': bool},
     }

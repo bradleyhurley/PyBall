@@ -6,7 +6,7 @@ from PyBall.models.primary_position import PrimaryPostion
 
 class Person(BaseModel):
     _fields = {
-        'name': {'default_value': None, 'field_type': int},
+        'id': {'default_value': None, 'field_type': str},
         'fullName': {'default_value': None, 'field_type': str},
         'link': {'default_value': None, 'field_type': str},
         'firstName': {'default_value': None, 'field_type': str},
