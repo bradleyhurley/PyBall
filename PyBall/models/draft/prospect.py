@@ -1,21 +1,21 @@
+from PyBall.models import BaseModel
 from PyBall.models.draft.home import Home
 from PyBall.models.draft.school import School
 from PyBall.models.draft.person import Person
 
 
-class Prospect:
-    def __init__(self, bisPlayerId=None, draftPlayerId=None, pickRound=None, pickNumber=None,
-                 rank=None, pickedTeamCode=None, home=None, scoutingReport=None, school=None,
-                 comments=None, person=None, photoFlag=None):
-        self.bisPlayerId = bisPlayerId
-        self.draftPlayerId = draftPlayerId
-        self.pickRound = pickRound
-        self.pickNumber = pickNumber
-        self.rank = rank
-        self.pickedTeamCode = pickedTeamCode
-        self.home = Home(**home)
-        self.scoutingReport = scoutingReport
-        self.school = School(**school)
-        self.comments = comments
-        self.person = Person(**person)
-        self.photoFlag = photoFlag
+class Prospect(BaseModel):
+    _fields = {
+        'person': {'default_value': {}, 'field_type': Person},
+        'bisPlayerId': {'default_value': None, 'field_type': int},
+        'draftPlayerId': {'default_value': None, 'field_type': int},
+        'pickRound': {'default_value': None, 'field_type': int},
+        'pickNumber': {'default_value': None, 'field_type': int},
+        'rank': {'default_value': None, 'field_type': int},
+        'pickedTeamCode': {'default_value': None, 'field_type': str},
+        'home': {'default_value': {}, 'field_type': Home},
+        'scoutingReport': {'default_value': None, 'field_type': str},
+        'photoFlag': {'default_value': None, 'field_type': bool},
+        'school': {'default_value': {}, 'field_type': School},
+        'comments': {'default_value': None, 'field_type': str},
+    }

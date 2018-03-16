@@ -1,4 +1,8 @@
-class ScheduleEventType:
-    def __init__(self, code=None, name=None):
-        self.code = code
-        self.name = name
+from PyBall.models import BaseModel
+
+
+class ScheduleEventType(BaseModel):
+    _fields = {
+        'code': {'default_value': None, 'field_type': str},
+        'name': {'default_value': None, 'field_type': str},
+    }

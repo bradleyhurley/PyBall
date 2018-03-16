@@ -1,7 +1,11 @@
-class School:
-    def __init__(self, name=None, schoolClass=None, city=None, country=None, state=None):
-        self.name = name
-        self.schoolClass = schoolClass
-        self.city = city
-        self.country = country
-        self.state = state
+from PyBall.models import BaseModel
+
+
+class School(BaseModel):
+    _fields = {
+        'name': {'default_value': None, 'field_type': str},
+        'schoolClass': {'default_value': None, 'field_type': str},
+        'city': {'default_value': None, 'field_type': str},
+        'country': {'default_value': None, 'field_type': str},
+        'state': {'default_value': None, 'field_type': str},
+    }

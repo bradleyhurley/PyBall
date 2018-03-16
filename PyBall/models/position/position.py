@@ -1,8 +1,12 @@
-class Position:
-    def __init__(self, id=None, fullName=None, link=None):
-        self.id = id
-        self.fullName = fullName
-        self.link = link
+from PyBall.models import BaseModel
+
+
+class Position(BaseModel):
+    _fields = {
+        'id': {'default_value': None, 'field_type': str},
+        'fullName': {'default_value': None, 'field_type': str},
+        'link': {'default_value': None, 'field_type': str},
+    }
 
 
 class Pitcher(Position):

@@ -1,4 +1,8 @@
-class Platform:
-    def __init__(self, platformCode, platformDescription=None):
-        self.platformCode = platformCode
-        self.platformDescription = platformDescription
+from PyBall.models import BaseModel
+
+
+class Platform(BaseModel):
+    _fields = {
+        'platformCode': {'default_value': None, 'field_type': str},
+        'platformDescription': {'default_value': None, 'field_type': str},
+    }

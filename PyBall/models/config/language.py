@@ -1,5 +1,9 @@
-class Language:
-    def __init__(self, name=None, languageCode=None, locale=None):
-        self.name = name
-        self.languageCode = languageCode
-        self.locale = locale
+from PyBall.models import BaseModel
+
+
+class Language(BaseModel):
+    _fields = {
+        'name': {'default_value': None, 'field_type': str},
+        'languageCode': {'default_value': None, 'field_type': str},
+        'locale': {'default_value': None, 'field_type': str},
+    }
