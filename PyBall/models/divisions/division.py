@@ -1,15 +1,16 @@
 from PyBall.models.league import League
 from PyBall.models.sport import Sport
+from PyBall.models.base_model import BaseModel
 
 
-class Division:
-    def __init__(self, id=None, name=None, nameShort=None, link=None, abbreviation=None,
-                 league=None, sport=None, hasWildcard=None):
-        self.id = id
-        self.name = name
-        self.nameShort = nameShort
-        self.link = link
-        self.abbreviation = abbreviation
-        self.league = League(**(league or {}))
-        self.sport = Sport(**(sport or {}))
-        self.hasWildcard = hasWildcard
+class Division(BaseModel):
+    _fields = {
+        'id': {'default_value': None, 'field_type': int},
+        'name': {'default_value': None, 'field_type': str},
+        'nameShort': {'default_value': None, 'field_type': str},
+        'link': {'default_value': None, 'field_type': str},
+        'abbreviation': {'default_value': None, 'field_type': str},
+        'league': {'default_value': {}, 'field_type': League},
+        'sport': {'default_value': {}, 'field_type': Sport},
+        'hasWildcard': {'default_value': None, 'field_type': bool},
+    }

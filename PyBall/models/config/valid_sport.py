@@ -1,4 +1,8 @@
-class ValidSport:
-    def __init__(self, name=None, explictModeOn=None):
-        self.name = name
-        self.explictModeOn = explictModeOn
+from PyBall.models.base_model import BaseModel
+
+
+class ValidSport(BaseModel):
+    _fields = {
+        'name': {'default_value': None, 'field_type': str},
+        'explictModeOn': {'default_value': None, 'field_type': bool},
+    }

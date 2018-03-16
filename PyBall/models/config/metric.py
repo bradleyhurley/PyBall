@@ -1,6 +1,10 @@
-class Metric:
-    def __init__(self, group=None, name=None, unit=None, metricId=None):
-        self.group = group
-        self.name = name
-        self.unit = unit
-        self.metricId = metricId
+from PyBall.models.base_model import BaseModel
+
+
+class Metric(BaseModel):
+    _fields = {
+        'group': {'default_value': None, 'field_type': str},
+        'name': {'default_value': None, 'field_type': str},
+        'unit': {'default_value': None, 'field_type': str},
+        'metricId': {'default_value': None, 'field_type': str},
+    }
