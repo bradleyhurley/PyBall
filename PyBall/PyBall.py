@@ -16,6 +16,8 @@ from PyBall.models.config.position import Position
 from PyBall.models.config.roster_type import RosterType
 from PyBall.models.config.schedule_event_type import ScheduleEventType
 from PyBall.models.config.situation_code import SituationCode
+from PyBall.models.config.stats_group import StatsGroup
+from PyBall.models.config import StatsType
 
 from PyBall.models.divisions import Division
 
@@ -94,10 +96,14 @@ class PyBall:
         return [SituationCode(**situation_code) for situation_code in results]
 
     def get_stats_groups(self):
-        pass
+        url = "{0}/statGroups".format(BASE_URL)
+        results = self._get(url)
+        return [StatsGroup(**stats_group) for stats_group in results]
 
     def get_stats_type(self):
-        pass
+        url = "{0}/statTypes".format(BASE_URL)
+        results = self._get(url)
+        return [StatsType(**stats_type) for stats_type in results]
 
     def get_divisions(self):
         url = "{0}/divisions".format(BASE_URL)

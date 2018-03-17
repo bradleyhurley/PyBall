@@ -8,4 +8,6 @@ from .roster_type import RosterType
 from .schedule_event_type import ScheduleEventType
 from .situation_code import SituationCode
 from .standing_type import StandingType
+from .stats_group import StatsGroup
+from .stats_type import StatsType
 from .valid_sport import ValidSport
