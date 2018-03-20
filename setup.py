@@ -21,8 +21,6 @@ with open(path.join(here, 'ReadMe.md'), encoding='utf-8') as f:
 
 dependencies = [
         'requests',
-        'pytest',
-        'flake8'
     ]
 
 
@@ -84,6 +82,14 @@ setup(
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
     install_requires=dependencies,
+
+    extras_require={
+        'dev': [
+            'pytest',
+            'flake8',
+            'versioneer'
+        ]
+    },
 
     # This supports adding all the configuration files that are part of our package
     # Note that python packaging documentation is very confusing on this functionality,
