@@ -4,6 +4,7 @@ from setuptools import setup, find_packages
 from codecs import open
 import os
 from os import path
+import versioneer
 
 """A setuptools based setup module.
 See:
@@ -43,7 +44,8 @@ setup(
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='0.1.0',
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
 
     description='A Python 3 Client To Interact with MLB.com Stats ',
     long_description=long_description,
