@@ -4,6 +4,7 @@ from setuptools import setup, find_packages
 from codecs import open
 import os
 from os import path
+import versioneer
 
 """A setuptools based setup module.
 See:
@@ -20,8 +21,6 @@ with open(path.join(here, 'ReadMe.md'), encoding='utf-8') as f:
 
 dependencies = [
         'requests',
-        'pytest',
-        'flake8'
     ]
 
 
@@ -43,7 +42,8 @@ setup(
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='0.1.0',
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
 
     description='A Python 3 Client To Interact with MLB.com Stats ',
     long_description=long_description,
@@ -82,6 +82,14 @@ setup(
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
     install_requires=dependencies,
+
+    extras_require={
+        'dev': [
+            'pytest',
+            'flake8',
+            'versioneer'
+        ]
+    },
 
     # This supports adding all the configuration files that are part of our package
     # Note that python packaging documentation is very confusing on this functionality,
