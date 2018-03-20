@@ -134,3 +134,38 @@ class PyBall:
         url = "{0}/draft/prospects/{1}".format(BASE_URL, year)
         results = self._get(url)
         return [Prospect(**prospect) for prospect in results['prospects']]
+
+    def get_live_game_feed(self, game_pk):
+        pass
+
+    def get_live_game_feed_after_time(self, game_pk, time):
+        pass
+
+    def get_game_timecodes(self, game_pk):
+        pass
+
+    def get_game_context_metrics(self, game_pk):
+        pass
+
+    def get_game_win_probability(self, game_pk):
+        pass
+
+    def get_game_box_score(self, game_pk):
+        pass
+
+    def get_game_color_feed(self, game_pk):
+        pass
+
+    def get_game_color_feed_after_time(self, game_pk):
+        pass
+
+    def get_game_color_timecodes(self, game_pk):
+        pass
+
+    def get_game_linescore(self, game_pk):
+        pass
+
+    def get_game_play_by_play(self, game_pk):
+        url = "{0}/game/{1}/playByPlay".format(BASE_URL, game_pk)
+        results = self._get(url)
+        return [Play(**play) for play in results['allPlays']]
