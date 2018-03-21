@@ -14,6 +14,6 @@ from .pitch_hand import PitchHand
 from .primary_position import PrimaryPostion
 from .sport import Sport
 from .springLeague import SpringLeague
-from .team import Team
+from .generic_team import  Team
 from .teams import Teams
 from .venue import Venue

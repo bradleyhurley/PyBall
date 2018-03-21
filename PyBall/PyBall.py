@@ -25,6 +25,9 @@ from PyBall.models.conference import Conference
 
 from PyBall.models.draft import Draft
 from PyBall.models.draft import Prospect
+from PyBall.models import Team
+from PyBall.models.team import Coach
+from PyBall.models.team import Player
 
 
 class PyBall:
@@ -134,3 +137,28 @@ class PyBall:
         url = "{0}/draft/prospects/{1}".format(BASE_URL, year)
         results = self._get(url)
         return [Prospect(**prospect) for prospect in results['prospects']]
+
+    def get_teams(self):
+        url = "{0}/teams".format(BASE_URL)
+        results = self._get(url)
+        return [Team(**team) for team in results['teams']]
+
+    def get_team_by_id(self, team_id):
+        url = "{0}/teams/{1}".format(BASE_URL, team_id)
+        results = self._get(url)
+        return Team(**results['teams'][0])
+
+    def get_team_affiliates(self, team_id):
+        url = "{0}/teams/{1}/affiliates".format(BASE_URL, team_id)
+        results = self._get(url)
+        return [Team(**team) for team in results['teams']]
+
+    def get_teams_coaches(self, team_id):
+        url = "{0}/teams/{1}/coaches".format(BASE_URL, team_id)
+        results = self._get(url)
+        return [Coach(**coach) for coach in results['roster']]
+
+    def get_roster_for_team(self, team_id, roster_type):
+        url = "{0}teams/{1}/roster/{2}".format(BASE_URL, team_id, roster_type)
+        results = self._get(url)
+        return [Player(**player) for player in results['roster']]
