@@ -9,7 +9,7 @@ from .inning import Inning
 from .innings import Innings
 from .league import League
 from .offense import Offense
-from .people import People
+from .person import Person
 from .pitch_hand import PitchHand
 from .primary_position import PrimaryPostion
 from .sport import Sport

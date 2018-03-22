@@ -3,7 +3,7 @@ from datetime import datetime
 
 from PyBall.constants import BASE_URL
 from PyBall.models.config.game_type import GameType
-from PyBall.models.people import People
+from PyBall.models.person import Person
 from PyBall.models.venue import Venue
 
 from PyBall.error_parser import ErrorParser
@@ -40,7 +40,7 @@ class PyBall:
     def get_player(self, player_id):
         url = "{0}/people/{1}".format(BASE_URL, player_id)
         results = self._get(url)
-        return People(**results['people'][0])
+        return Person(**results['people'][0])
 
     def get_venue(self, venue_id):
         url = "{0}/venues/{1}".format(BASE_URL, venue_id)
