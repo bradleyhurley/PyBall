@@ -1,8 +1,9 @@
-from PyBall.models.away import Away
-from PyBall.models.home import Home
+from PyBall.models import BaseModel
+from PyBall.models.line_score import LineScore
 
 
-class Teams:
-    def __init__(self, home=None, away=None):
-        self.home = Home(**home)
-        self.away = Away(**away)
+class Teams(BaseModel):
+    _fields = {
+        'home': {'default_value': {}, 'field_type': LineScore},
+        'away': {'default_value': {}, 'field_type': LineScore},
+    }

@@ -36,23 +36,3 @@ class BaseModel(metaclass=BaseModelType):
         if extra_fields:
             self.log.warn("Extra fields found: {}. Upgrade PyBall to access new data fields."
                           .format(', '.join(extra_fields)))
-
-    def to_dict(self, flatten=False):
-        ret_dict = {}
-        for field in self._fields:
-            if flatten:
-                field_dict = self._convert_sub_models(field, getattr(self, field))
-            else:
-                field_dict = {field: getattr(self, field)}
-            ret_dict.update(field_dict)
-        return ret_dict
-        # return {x: self._convert_sub_models(x, self.__dict__[x])
-        #         for x in self.__dict__
-        #         if x in self._fields}
-
-    def _convert_sub_models(self, key, val):
-        if isinstance(val, BaseModel):
-            val_dict = val.to_dict()
-            return {'{}.{}'.format(key, x): val_dict[x] for x in val_dict}
-        else:
-            return {key: val}
