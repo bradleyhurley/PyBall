@@ -1,28 +1,28 @@
 import requests
 from datetime import datetime
 
-from PyBall.constants import BASE_URL
-from PyBall.models.config.game_type import GameType
-from PyBall.models.people import People
-from PyBall.models.venue import Venue
+from pyball.constants import BASE_URL
+from pyball.models.config.game_type import GameType
+from pyball.models.people import People
+from pyball.models.venue import Venue
 
-from PyBall.error_parser import ErrorParser
+from pyball.error_parser import ErrorParser
 
-from PyBall.models.config.language import Language
-from PyBall.models.config.league_leader_type import LeagueLeaderType
-from PyBall.models.config.metric import Metric
-from PyBall.models.config.platform import Platform
-from PyBall.models.config.position import Position
-from PyBall.models.config.roster_type import RosterType
-from PyBall.models.config.schedule_event_type import ScheduleEventType
-from PyBall.models.config.situation_code import SituationCode
+from pyball.models.config.language import Language
+from pyball.models.config.league_leader_type import LeagueLeaderType
+from pyball.models.config.metric import Metric
+from pyball.models.config.platform import Platform
+from pyball.models.config.position import Position
+from pyball.models.config.roster_type import RosterType
+from pyball.models.config.schedule_event_type import ScheduleEventType
+from pyball.models.config.situation_code import SituationCode
 
-from PyBall.models.divisions import Division
+from pyball.models.divisions import Division
 
-from PyBall.models.conference import Conference
+from pyball.models.conference import Conference
 
-from PyBall.models.draft import Draft
-from PyBall.models.draft import Prospect
+from pyball.models.draft import Draft
+from pyball.models.draft import Prospect
 
 
 class PyBall:
