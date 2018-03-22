@@ -1,5 +1,5 @@
-from PyBall.models.sport import Sport
-from PyBall.models.league import League
+from pyball.models.sport import Sport
+from pyball.models.league import League
 
 
 class Conference:

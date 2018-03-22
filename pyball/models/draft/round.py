@@ -1,4 +1,4 @@
-from PyBall.models.draft.pick import Pick
+from pyball.models.draft.pick import Pick
 
 
 class Round:

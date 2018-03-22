@@ -1,14 +1,14 @@
 import pytest
-from PyBall import PyBall
-from PyBall.models.draft import Draft
-from PyBall.models.draft import Prospect
-from PyBall.models.draft import Round
-from PyBall.models.draft import Pick
-from PyBall.models.draft import Home
-from PyBall.models.draft import School
-from PyBall.models.draft import Person
+from pyball import PyBall
+from pyball.models.draft import Draft
+from pyball.models.draft import Prospect
+from pyball.models.draft import Round
+from pyball.models.draft import Pick
+from pyball.models.draft import Home
+from pyball.models.draft import School
+from pyball.models.draft import Person
 
-from PyBall.exceptions import BadRequestError
+from pyball.exceptions import BadRequestError
 
 
 @pytest.fixture(scope='module')

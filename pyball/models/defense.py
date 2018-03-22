@@ -1,14 +1,14 @@
-from PyBall.models.position.position import Center
-from PyBall.models.position.position import First
-from PyBall.models.position.position import Left
-from PyBall.models.position.position import Pitcher
-from PyBall.models.position.position import Right
-from PyBall.models.position.position import Second
-from PyBall.models.position.position import Shortstop
-from PyBall.models.position.position import Third
-from PyBall.models.position.position import Catcher
+from pyball.models.position.position import Center
+from pyball.models.position.position import First
+from pyball.models.position.position import Left
+from pyball.models.position.position import Pitcher
+from pyball.models.position.position import Right
+from pyball.models.position.position import Second
+from pyball.models.position.position import Shortstop
+from pyball.models.position.position import Third
+from pyball.models.position.position import Catcher
 
-from PyBall.models.team import Team
+from pyball.models.team import Team
 
 
 class Defense:

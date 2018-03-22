@@ -1,4 +1,4 @@
-from .PyBall import PyBall
+from .pyball import PyBall
 
 __all__ = ["PyBall", "models"]
 

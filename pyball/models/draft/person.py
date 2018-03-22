@@ -1,6 +1,6 @@
-from PyBall.models.pitch_hand import PitchHand
-from PyBall.models.bat_side import BatSide
-from PyBall.models.primary_position import PrimaryPostion
+from pyball.models.pitch_hand import PitchHand
+from pyball.models.bat_side import BatSide
+from pyball.models.primary_position import PrimaryPostion
 
 
 class Person:

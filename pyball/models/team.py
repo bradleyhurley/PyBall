@@ -1,6 +1,6 @@
-from PyBall.models.sport import Sport
-from PyBall.models.league import League
-from PyBall.models.venue import Venue
+from pyball.models.sport import Sport
+from pyball.models.league import League
+from pyball.models.venue import Venue
 
 
 class Team:

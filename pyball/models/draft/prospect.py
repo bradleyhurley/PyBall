@@ -1,6 +1,6 @@
-from PyBall.models.draft.home import Home
-from PyBall.models.draft.school import School
-from PyBall.models.draft.person import Person
+from pyball.models.draft.home import Home
+from pyball.models.draft.school import School
+from pyball.models.draft.person import Person
 
 
 class Prospect:
