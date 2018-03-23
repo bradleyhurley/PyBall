@@ -1,7 +1,7 @@
 ## PyBall - A MLB.com Stats API Python Client
 
 [![Build Status](https://travis-ci.org/bradleyhurley/PyBall.svg?branch=master)](https://travis-ci.org/bradleyhurley/PyBall)
-[![codecov](https://codecov.io/gh/a-hacker/PyBall/branch/master/graph/badge.svg)](https://codecov.io/gh/a-hacker/PyBall)
+[![codecov](https://codecov.io/gh/bradleyhurley/PyBall/branch/master/graph/badge.svg)](https://codecov.io/gh/bradleyhurley/PyBall)
 
 ## API Documentation:
 http://statsapi.mlb.com/docs/#
