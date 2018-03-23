@@ -1,3 +1,4 @@
+from PyBall.models import BaseModel
 from PyBall.models.position.position import Center
 from PyBall.models.position.position import First
 from PyBall.models.position.position import Left
@@ -11,16 +12,16 @@ from PyBall.models.position.position import Catcher
 from PyBall.models.generic_team import Team
 
 
-class Defense:
-    def __init__(self, pitcher=None, catcher=None, first=None, second=None, third=None,
-                 shortstop=None, left=None, center=None, right=None, team=None):
-        self.pitcher = Pitcher(**pitcher)
-        self.catcher = Catcher(**catcher)
-        self.first = First(**first)
-        self.second = Second(**second)
-        self.third = Third(**third)
-        self.shortstop = Shortstop(**shortstop)
-        self.left = Left(**left)
-        self.center = Center(**center)
-        self.right = Right(**right)
-        self.team = Team(**team)
+class Defense(BaseModel):
+    _fields = {
+        'pitcher': {'default_value': {}, 'field_type': Pitcher},
+        'catcher': {'default_value': {}, 'field_type': Catcher},
+        'first': {'default_value': {}, 'field_type': First},
+        'second': {'default_value': {}, 'field_type': Second},
+        'third': {'default_value': {}, 'field_type': Third},
+        'shortstop': {'default_value': {}, 'field_type': Shortstop},
+        'left': {'default_value': {}, 'field_type': Left},
+        'center': {'default_value': {}, 'field_type': Center},
+        'right': {'default_value': {}, 'field_type': Right},
+        'team': {'default_value': {}, 'field_type': Team},
+    }

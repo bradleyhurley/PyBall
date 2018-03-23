@@ -1,6 +1,8 @@
+from PyBall.models import BaseModel
 from PyBall.models.inning import Inning
 
 
-class Innings:
-    def __init__(self, inning=None):
-        self.inning = Inning(**inning)
+class Innings(BaseModel):
+    _fields = {
+        'inning': {'default_value': {}, 'field_type': Inning},
+    }

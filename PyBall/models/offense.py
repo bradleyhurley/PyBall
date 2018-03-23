@@ -1,3 +1,4 @@
+from PyBall.models import BaseModel
 from PyBall.models.position.position import Batter
 from PyBall.models.position.position import InHole
 from PyBall.models.position.position import OnDeck
@@ -5,10 +6,11 @@ from PyBall.models.position.position import Pitcher
 from PyBall.models.generic_team import Team
 
 
-class Offense:
-    def __init__(self, batter=None, onDeck=None, inHole=None, pitcher=None, team=None):
-        self.batter = Batter(**batter)
-        self.onDeck = OnDeck(**onDeck)
-        self.inHole = InHole(**inHole)
-        self.pitcher = Pitcher(**pitcher)
-        self.team = Team(**team)
+class Offense(BaseModel):
+    _fields = {
+        'batter': {'default_value': {}, 'field_type': Batter},
+        'onDeck': {'default_value': {}, 'field_type': OnDeck},
+        'inHole': {'default_value': {}, 'field_type': InHole},
+        'pitcher': {'default_value': {}, 'field_type': Pitcher},
+        'team': {'default_value': {}, 'field_type': Team},
+    }
