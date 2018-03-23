@@ -29,6 +29,8 @@ from PyBall.models import Team
 from PyBall.models.team import Coach
 from PyBall.models.team import Player
 
+from PyBall.models.seasons import Season
+
 
 class PyBall:
     def __init__(self):
@@ -162,3 +164,13 @@ class PyBall:
         url = "{0}teams/{1}/roster/{2}".format(BASE_URL, team_id, roster_type)
         results = self._get(url)
         return [Player(**player) for player in results['roster']]
+
+    def get_seasons(self):
+        url = "{0}seasons".format(BASE_URL)
+        results = self._get(url)
+        return [Season(**season) for season in results['seasons']]
+
+    def get_season_by_id(self, season_id):
+        url = "{0}seasons/{1}".format(BASE_URL, season_id)
+        results = self._get(url)
+        return Season(**results['seasons'][0])
