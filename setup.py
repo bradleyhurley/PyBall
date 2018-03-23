@@ -87,7 +87,9 @@ setup(
         'dev': [
             'pytest',
             'flake8',
-            'versioneer'
+            'versioneer',
+            'codecov',
+            'pytest-cov'
         ]
     },
 
