@@ -1,10 +1,13 @@
-class SituationCode:
-    def __init__(self, code=None, sortOrder=None, navigationMenu=None, description=None, team=None,
-                 batting=None, fielding=None):
-        self.code = code
-        self.sortOrder = sortOrder
-        self.navigationMenu = navigationMenu
-        self.description = description
-        self.team = team
-        self.batting = batting
-        self.fielding = fielding
+from PyBall.models import BaseModel
+
+
+class SituationCode(BaseModel):
+    _fields = {
+        'code': {'default_value': None, 'field_type': str},
+        'sortOrder': {'default_value': None, 'field_type': int},
+        'navigationMenu': {'default_value': None, 'field_type': str},
+        'description': {'default_value': None, 'field_type': str},
+        'team': {'default_value': None, 'field_type': bool},
+        'batting': {'default_value': None, 'field_type': bool},
+        'fielding': {'default_value': None, 'field_type': bool},
+    }

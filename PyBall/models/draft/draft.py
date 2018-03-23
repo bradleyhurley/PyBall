@@ -1,7 +1,9 @@
 from PyBall.models.draft.round import Round
+from PyBall.models import BaseModel
 
 
-class Draft:
-    def __init__(self, rounds=None, draftYear=None):
-        self.draftYear = draftYear
-        self.rounds = [Round(**rnd) for rnd in rounds]
+class Draft(BaseModel):
+    _fields = {
+        'draftYear': {'default_value': None, 'field_type': int},
+        'rounds': {'default_value': [], 'field_type': [Round]},
+    }

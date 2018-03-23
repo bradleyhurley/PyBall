@@ -1,10 +1,11 @@
-from PyBall.models.away import Away
-from PyBall.models.home import Home
+from PyBall.models import BaseModel
+from PyBall.models.line_score import LineScore
 
 
-class Inning:
-    def __init__(self, num=None, ordinalNum=None, home=None, away=None):
-        self.num = num
-        self.ordinalNum = ordinalNum
-        self.home = Home(**home)
-        self.away = Away(**away)
+class Inning(BaseModel):
+    _fields = {
+        'num': {'default_value': None, 'field_type': int},
+        'ordinalNum': {'default_value': None, 'field_type': int},
+        'home': {'default_value': {}, 'field_type': LineScore},
+        'away': {'default_value': {}, 'field_type': LineScore},
+    }

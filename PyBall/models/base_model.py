@@ -24,7 +24,9 @@ class BaseModel(metaclass=BaseModelType):
             default_value = self._fields[name]['default_value']
             raw_value = kwargs.get(name, default_value)
             field_type = self._fields[name]['field_type']
-            if issubclass(field_type, BaseModel):
+            if isinstance(field_type, list):
+                value = [field_type[0](**x) for x in raw_value]
+            elif issubclass(field_type, BaseModel):
                 value = field_type(**raw_value)
             else:
                 value = raw_value

@@ -1,20 +1,20 @@
+from PyBall.models import BaseModel
 from PyBall.models.pitch_hand import PitchHand
 from PyBall.models.bat_side import BatSide
 from PyBall.models.primary_position import PrimaryPostion
 
 
-class Person:
-    def __init__(self, id=None, fullName=None, link=None, firstName=None, lastName=None,
-                 birthDate=None, birthCountry=None, primaryPosition=None, batSide=None,
-                 pitchHand=None, nameSlug=None):
-        self.id = id
-        self.fullName = fullName
-        self.link = link
-        self.firstName = firstName
-        self.lastName = lastName
-        self.birthDate = birthDate
-        self.birthCountry = birthCountry
-        self.primaryPosition = PrimaryPostion(**primaryPosition)
-        self.batSide = BatSide(**batSide)
-        self.pitchHand = PitchHand(**pitchHand)
-        self.nameSlug = nameSlug
+class Person(BaseModel):
+    _fields = {
+        'id': {'default_value': None, 'field_type': str},
+        'fullName': {'default_value': None, 'field_type': str},
+        'link': {'default_value': None, 'field_type': str},
+        'firstName': {'default_value': None, 'field_type': str},
+        'lastName': {'default_value': None, 'field_type': str},
+        'birthDate': {'default_value': None, 'field_type': str},
+        'birthCountry': {'default_value': None, 'field_type': str},
+        'primaryPosition': {'default_value': {}, 'field_type': PrimaryPostion},
+        'batSide': {'default_value': {}, 'field_type': BatSide},
+        'pitchHand': {'default_value': {}, 'field_type': PitchHand},
+        'nameSlug': {'default_value': None, 'field_type': str},
+    }

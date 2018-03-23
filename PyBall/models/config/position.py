@@ -1,12 +1,15 @@
-class Position:
-    def __init__(self, shortName=None, fullName=None, abbrev=None, code=None, type=None,
-                 pitcher=None, fielder=None, outfield=None, displayName=None):
-        self.shortName = shortName
-        self.fullName = fullName
-        self.abbrev = abbrev
-        self.code = code
-        self.type = type
-        self.pitcher = pitcher
-        self.outfield = outfield
-        self.fielder = fielder
-        self.displayName = displayName
+from PyBall.models import BaseModel
+
+
+class Position(BaseModel):
+    _fields = {
+        'shortName': {'default_value': None, 'field_type': str},
+        'fullName': {'default_value': None, 'field_type': str},
+        'abbrev': {'default_value': None, 'field_type': str},
+        'code': {'default_value': None, 'field_type': str},
+        'type': {'default_value': None, 'field_type': str},
+        'outfield': {'default_value': None, 'field_type': bool},
+        'pitcher': {'default_value': None, 'field_type': bool},
+        'fielder': {'default_value': None, 'field_type': bool},
+        'displayName': {'default_value': None, 'field_type': str},
+    }

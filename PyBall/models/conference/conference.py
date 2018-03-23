@@ -1,15 +1,16 @@
-from PyBall.models.sport import Sport
-from PyBall.models.league import League
+from PyBall.models.base_model import BaseModel
+from .sport import Sport
+from .league import League
 
 
-class Conference:
-    def __init__(self, id=None, link=None, name=None, abbreviation=None, hasWildcard=None,
-                 nameShort=None, league=None, sport=None):
-        self.id = id
-        self.link = link
-        self.name = name
-        self.abbreviation = abbreviation
-        self.hasWildCard = hasWildcard
-        self.nameShort = nameShort
-        self.league = League(**league)
-        self.sport = Sport(**sport)
+class Conference(BaseModel):
+    _fields = {
+        'id': {'default_value': None, 'field_type': int},
+        'link': {'default_value': None, 'field_type': str},
+        'name': {'default_value': None, 'field_type': str},
+        'abbreviation': {'default_value': None, 'field_type': str},
+        'hasWildcard': {'default_value': None, 'field_type': bool},
+        'nameShort': {'default_value': None, 'field_type': str},
+        'league': {'default_value': {}, 'field_type': League},
+        'sport': {'default_value': {}, 'field_type': Sport},
+    }

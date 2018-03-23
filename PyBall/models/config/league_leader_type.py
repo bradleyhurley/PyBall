@@ -1,11 +1,10 @@
+from PyBall.models import BaseModel
 from PyBall.models.config.valid_sport import ValidSport
 
 
-class LeagueLeaderType:
-    def __init__(self, displayName=None, validSports=None, hasMinimums=None):
-        self.displayName = displayName
-        self.hasMinimums = hasMinimums
-        self.validSports = []
-
-        for vs in validSports:
-            self.validSports.append(ValidSport(**vs))
+class LeagueLeaderType(BaseModel):
+    _fields = {
+        'displayName': {'default_value': None, 'field_type': str},
+        'hasMinimums': {'default_value': None, 'field_type': bool},
+        'validSports': {'default_value': [], 'field_type': [ValidSport]},
+    }

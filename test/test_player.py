@@ -1,6 +1,6 @@
 import pytest
 from PyBall import PyBall
-from PyBall.models import People
+from PyBall.models import Person
 
 from PyBall.exceptions import InvalidIdError, BadRequestError
 
@@ -12,7 +12,7 @@ def test_player():
 
 
 def test_get_player_endpoint_returns_player(test_player):
-    assert isinstance(test_player, People)
+    assert isinstance(test_player, Person)
 
 
 def test_bad_player_id():
