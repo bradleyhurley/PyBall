@@ -9,7 +9,7 @@ from PyBall.models.position.position import Shortstop
 from PyBall.models.position.position import Third
 from PyBall.models.position.position import Catcher
 
-from PyBall.models.team import Team
+from PyBall.models.generic_team import Team
 
 
 class Defense(BaseModel):

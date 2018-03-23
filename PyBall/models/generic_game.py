@@ -1,5 +1,5 @@
 from PyBall.models import BaseModel
-from PyBall.models.team import Team
+from PyBall.models.generic_team import Team
 from PyBall.models.defense import Defense
 from PyBall.models.offense import Offense
 from PyBall.models.innings import Innings
