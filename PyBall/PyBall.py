@@ -29,6 +29,8 @@ from PyBall.models import Team
 from PyBall.models.team import Coach
 from PyBall.models.team import Player
 
+from PyBall.models.generic_sport import Sport as GSport
+
 
 class PyBall:
     def __init__(self):
@@ -162,3 +164,13 @@ class PyBall:
         url = "{0}teams/{1}/roster/{2}".format(BASE_URL, team_id, roster_type)
         results = self._get(url)
         return [Player(**player) for player in results['roster']]
+
+    def get_sports(self):
+        url = "{0}sports".format(BASE_URL)
+        results = self._get(url)
+        return [GSport(**sport) for sport in results['sports']]
+
+    def get_sport_by_id(self, sport):
+        url = "{0}sports/{1}".format(BASE_URL, sport)
+        results = self._get(url)
+        return GSport(**results['sports'][0])

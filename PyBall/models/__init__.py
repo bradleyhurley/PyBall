@@ -3,6 +3,8 @@ from .bat_side import BatSide
 from .defense import Defense
 from .division import Division
 from .generic_game import Game
+from .generic_sport import Sport
+from .generic_team import Team
 from .inning import Inning
 from .innings import Innings
 from .league import League
