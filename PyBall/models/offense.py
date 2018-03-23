@@ -3,7 +3,7 @@ from PyBall.models.position.position import Batter
 from PyBall.models.position.position import InHole
 from PyBall.models.position.position import OnDeck
 from PyBall.models.position.position import Pitcher
-from PyBall.models.team import Team
+from PyBall.models.generic_team import Team
 
 
 class Offense(BaseModel):
