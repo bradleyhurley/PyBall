@@ -12,4 +12,3 @@ def test_team_coaches():
 def test_get_teams_returns_list_of_teams(test_team_coaches):
     assert isinstance(test_team_coaches, list)
     assert isinstance(test_team_coaches[0], Coach)
-

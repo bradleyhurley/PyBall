@@ -8,7 +8,6 @@ from PyBall.models import Division
 from PyBall.models import SpringLeague
 
 
-
 @pytest.fixture(scope='module')
 def test_game_teams():
     pyball = PyBall()

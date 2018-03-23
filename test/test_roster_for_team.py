@@ -16,4 +16,3 @@ def test_get_roster_for_team_returns_list_of_players(test_roster_for_team):
     assert isinstance(test_roster_for_team[0], Player)
     assert isinstance(test_roster_for_team[0].status, Status)
     assert isinstance(test_roster_for_team[0].person, Person)
-
