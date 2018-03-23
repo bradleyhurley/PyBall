@@ -353,6 +353,16 @@ def render_pep440_pre(pieces):
     return rendered
 
 
+def render_pyball(pieces):
+    """TAG.DISTANCE[.dirty]
+    """
+    rendered = pieces["closest-tag"] or "0.untagged"
+    rendered += '.{}'.format(pieces['distance'])
+    if pieces["dirty"]:
+        rendered += ".dirty"
+    return rendered
+
+
 def render_pep440_post(pieces):
     """TAG[.postDISTANCE[.dev0]+gHEX] .
 
@@ -456,6 +466,8 @@ def render(pieces, style):
 
     if style == "pep440":
         rendered = render_pep440(pieces)
+    elif style == 'PyBall':
+        rendered = render_pyball(pieces)
     elif style == "pep440-pre":
         rendered = render_pep440_pre(pieces)
     elif style == "pep440-post":
