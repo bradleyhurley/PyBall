@@ -3,8 +3,6 @@ from .bat_side import BatSide
 from .defense import Defense
 from .division import Division
 from .generic_game import Game
-from .generic_sport import Sport
-from .generic_team import Team
 from .inning import Inning
 from .innings import Innings
 from .league import League
@@ -15,6 +13,6 @@ from .pitch_hand import PitchHand
 from .primary_position import PrimaryPostion
 from .sport import Sport
 from .springLeague import SpringLeague
-from .generic_team import  Team
+from .generic_team import Team
 from .teams import Teams
 from .venue import Venue

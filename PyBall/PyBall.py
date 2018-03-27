@@ -3,8 +3,8 @@ from datetime import datetime
 
 from PyBall.constants import BASE_URL
 from PyBall.models.config.game_type import GameType
-from PyBall.models.person import Person
-from PyBall.models.venue import Venue
+from PyBall.models import Person
+from PyBall.models import Venue
 
 from PyBall.error_parser import ErrorParser
 
@@ -26,10 +26,9 @@ from PyBall.models.conference import Conference
 from PyBall.models.draft import Draft
 from PyBall.models.draft import Prospect
 from PyBall.models import Team
+from PyBall.models import Sport
 from PyBall.models.team import Coach
 from PyBall.models.team import Player
-
-from PyBall.models.generic_sport import Sport as GSport
 
 
 class PyBall:
@@ -168,9 +167,9 @@ class PyBall:
     def get_sports(self):
         url = "{0}sports".format(BASE_URL)
         results = self._get(url)
-        return [GSport(**sport) for sport in results['sports']]
+        return [Sport(**sport) for sport in results['sports']]
 
     def get_sport_by_id(self, sport):
         url = "{0}sports/{1}".format(BASE_URL, sport)
         results = self._get(url)
-        return GSport(**results['sports'][0])
+        return Sport(**results['sports'][0])
