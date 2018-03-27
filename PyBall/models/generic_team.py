@@ -1,6 +1,6 @@
 from PyBall.models import BaseModel
 from PyBall.models.sport import Sport
-from PyBall.models.league import League
+from PyBall.models.generic_league import League
 from PyBall.models.venue import Venue
 from PyBall.models.division import Division
 from PyBall.models.springLeague import SpringLeague
