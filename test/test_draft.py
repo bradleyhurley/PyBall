@@ -67,4 +67,3 @@ def test_get_not_found_draft_prospects():
     pyball = PyBall()
     with pytest.raises(NotFound):
         pyball._get("{}/draft/prospects".format(BASE_URL))
-
