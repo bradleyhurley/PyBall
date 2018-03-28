@@ -18,6 +18,7 @@ from PyBall.models.config.schedule_event_type import ScheduleEventType
 from PyBall.models.config.situation_code import SituationCode
 from PyBall.models.config.stats_group import StatsGroup
 from PyBall.models.config import StatsType
+from PyBall.models.config import GameStatus
 
 from PyBall.models.divisions import Division
 
@@ -52,7 +53,9 @@ class PyBall:
         return Venue(**results['venues'][0])
 
     def get_game_status(self):
-        pass
+        url = "{0}gameStatus".format(BASE_URL)
+        results = self._get(url)
+        return [GameStatus(**game_status) for game_status in results]
 
     def get_game_types(self):
         url = "{0}/gameTypes".format(BASE_URL)
