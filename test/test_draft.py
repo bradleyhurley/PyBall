@@ -42,3 +42,9 @@ def test_bad_draft_year():
     pyball = PyBall()
     with pytest.raises(BadRequestError):
         pyball.get_draft_by_year("BadYear")
+
+
+def test_get_draft():
+    pyball = PyBall()
+    with pytest.raises(NotImplementedError):
+        pyball.get_draft()
