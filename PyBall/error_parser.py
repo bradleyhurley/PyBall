@@ -11,5 +11,7 @@ class ErrorParser:
             raise InvalidIdError(err_message)
         elif err_code == 11:
             raise BadRequestError(err_message)
+        elif err_code == 13:
+            raise TookTooLongError(err_message)
         else:
             raise PyBallError(err_message)

@@ -8,3 +8,7 @@ class BadRequestError(PyBallError):
 
 class InvalidIdError(PyBallError):
     pass
+
+
+class TookTooLongError(PyBallError):
+    pass
