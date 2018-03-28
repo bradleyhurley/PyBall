@@ -24,4 +24,6 @@ class Team(BaseModel):
         'shortName': {'default_value': None, 'field_type': str},
         'springLeague': {'default_value': {}, 'field_type': SpringLeague},
         'active': {'default_value': None, 'field_type': bool},
+        'parentOrgId': {'default_value': None, 'field_type': int},
+        'parentOrgName': {'default_value': None, 'field_type': str},
     }
