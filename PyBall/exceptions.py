@@ -12,3 +12,7 @@ class InvalidIdError(PyBallError):
 
 class TookTooLongError(PyBallError):
     pass
+
+
+class NotFound(PyBallError):
+    pass
