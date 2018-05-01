@@ -3,6 +3,8 @@ from datetime import datetime
 
 from PyBall.constants import BASE_URL
 from PyBall.models.config.game_type import GameType
+
+from PyBall.models import League
 from PyBall.models import Person
 from PyBall.models import Venue
 
@@ -178,6 +180,11 @@ class PyBall:
         url = "{0}teams/{1}/roster/{2}".format(BASE_URL, team_id, roster_type)
         results = self._get(url)
         return [Player(**player) for player in results['roster']]
+
+    def get_league_by_id(self, league_id):
+        url = "{0}/league/{1}".format(BASE_URL, league_id)
+        results = self._get(url)
+        return League(**results['leagues'][0])
 
     def get_sports(self):
         url = "{0}sports".format(BASE_URL)

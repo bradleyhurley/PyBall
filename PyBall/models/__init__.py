@@ -5,7 +5,7 @@ from .division import Division
 from .generic_game import Game
 from .inning import Inning
 from .innings import Innings
-from .league import League
+from .generic_league import League
 from .line_score import LineScore
 from .offense import Offense
 from .person import Person
