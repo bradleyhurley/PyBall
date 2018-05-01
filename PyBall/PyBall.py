@@ -70,6 +70,10 @@ class PyBall:
         results = self._get(url)
         return [StandingType(**standing_type) for standing_type in results]
 
+    def get_standings(self, standing_type):
+        # url = "{0}/standings/{1}".format(BASE_URL, standing_type)
+        raise NotImplementedError
+
     def get_languages(self):
         url = "{0}/languages".format(BASE_URL)
         results = self._get(url)
