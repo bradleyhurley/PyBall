@@ -195,3 +195,13 @@ class PyBall:
         url = "{0}sports/{1}".format(BASE_URL, sport)
         results = self._get(url)
         return Sport(**results['sports'][0])
+
+    def get_seasons(self):
+        # url = "{0}seasons/".format(BASE_URL)
+        # results = self._get(url)
+        raise NotImplementedError
+
+    def get_season_by_id(self, season_id):
+        # url = "{0}seasons/{1}".format(BASE_URL, season_id)
+        # results = self._get(url)
+        raise NotImplementedError
