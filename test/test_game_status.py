@@ -1,6 +1,6 @@
 import pytest
-from PyBall import PyBall
-from PyBall.models.config import GameStatus
+from pyball import PyBall
+from pyball.models.config import GameStatus
 
 
 @pytest.fixture(scope='module')

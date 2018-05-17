@@ -1,11 +1,11 @@
 import pytest
-from PyBall import PyBall
-from PyBall.models import Team
-from PyBall.models import Sport
-from PyBall.models import League
-from PyBall.models import Venue
-from PyBall.models import Division
-from PyBall.models import SpringLeague
+from pyball import PyBall
+from pyball.models import Team
+from pyball.models import Sport
+from pyball.models import League
+from pyball.models import Venue
+from pyball.models import Division
+from pyball.models import SpringLeague
 
 
 @pytest.fixture(scope='module')

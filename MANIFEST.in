@@ -1,2 +1,2 @@
 include versioneer.py
-include PyBall/_version.py
+include pyball/_version.py

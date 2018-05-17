@@ -1,6 +1,6 @@
 import pytest
-from PyBall import PyBall
-from PyBall.models.config import LeagueLeaderType
+from pyball import PyBall
+from pyball.models.config import LeagueLeaderType
 
 
 @pytest.fixture(scope='module')
