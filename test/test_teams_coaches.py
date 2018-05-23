@@ -1,6 +1,6 @@
 import pytest
-from PyBall import PyBall
-from PyBall.models.team import Coach
+from pyball import PyBall
+from pyball.models.team import Coach
 
 
 @pytest.fixture(scope='module')

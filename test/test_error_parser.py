@@ -1,6 +1,6 @@
 import pytest
-from PyBall.error_parser import ErrorParser
-from PyBall.exceptions import *
+from pyball.error_parser import ErrorParser
+from pyball.exceptions import *
 
 INVALID_ID_CODE = 10
 BAD_REQUEST_CODE = 11

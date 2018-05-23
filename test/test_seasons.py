@@ -1,8 +1,8 @@
 import pytest
-from PyBall import PyBall
-from PyBall.constants import BASE_URL
+from pyball import PyBall
+from pyball.constants import BASE_URL
 
-from PyBall.exceptions import TookTooLongError
+from pyball.exceptions import TookTooLongError
 
 
 def test_get_season_took_too_long():

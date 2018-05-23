@@ -1,7 +1,7 @@
 [run]
 branch = True
-source = PyBall
+source = pyball
 
 [report]
 omit =
-    PyBall/_version.py
+    pyball/_version.py

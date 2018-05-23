@@ -1,8 +1,8 @@
 import pytest
-from PyBall import PyBall
-from PyBall.models import Person
+from pyball import PyBall
+from pyball.models import Person
 
-from PyBall.exceptions import InvalidIdError, BadRequestError
+from pyball.exceptions import InvalidIdError, BadRequestError
 
 
 @pytest.fixture(scope='module')

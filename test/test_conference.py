@@ -1,8 +1,8 @@
 import pytest
-from PyBall import PyBall
-from PyBall.models.conference import Conference
+from pyball import PyBall
+from pyball.models.conference import Conference
 
-from PyBall.exceptions import BadRequestError
+from pyball.exceptions import BadRequestError
 
 
 @pytest.fixture(scope='module')

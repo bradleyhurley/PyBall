@@ -1,6 +1,6 @@
 import pytest
-from PyBall import PyBall
-from PyBall.models.config import SituationCode
+from pyball import PyBall
+from pyball.models.config import SituationCode
 
 
 @pytest.fixture(scope='module')

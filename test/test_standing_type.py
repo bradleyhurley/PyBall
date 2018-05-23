@@ -1,6 +1,6 @@
 import pytest
-from PyBall import PyBall
-from PyBall.models.config import StandingType
+from pyball import PyBall
+from pyball.models.config import StandingType
 
 
 @pytest.fixture(scope='module')

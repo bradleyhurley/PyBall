@@ -1,6 +1,6 @@
 import pytest
-from PyBall import PyBall
-from PyBall.models.config import Position
+from pyball import PyBall
+from pyball.models.config import Position
 
 
 @pytest.fixture(scope='module')

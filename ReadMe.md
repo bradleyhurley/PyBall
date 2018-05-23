@@ -8,12 +8,11 @@ http://statsapi.mlb.com/docs/#
 
 
 ```python
-import PyBall
-
+import pyball
 
 def main():
-    pyball = PyBall()
-    kluber = pyball.get_player(446372)
+    pb = pyball.PyBall()
+    kluber = pb.get_player(446372)
     print(kluber.fullName)
     print(kluber.pitchHand.description)
     print(kluber.batSide.description)
@@ -23,6 +22,7 @@ if __name__ == '__main__':
     main()
 
 ```
+
 ##### This is very much in ~~beta~~ alpha.
 
 ## Logging

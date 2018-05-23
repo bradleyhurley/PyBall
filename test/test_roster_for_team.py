@@ -1,8 +1,8 @@
 import pytest
-from PyBall import PyBall
-from PyBall.models.team import Player
-from PyBall.models.team import Status
-from PyBall.models.team import Person
+from pyball import PyBall
+from pyball.models.team import Player
+from pyball.models.team import Status
+from pyball.models.team import Person
 
 
 @pytest.fixture(scope='module')

@@ -1,6 +1,6 @@
 import pytest
-from PyBall import PyBall
-from PyBall.models.config import ScheduleEventType
+from pyball import PyBall
+from pyball.models.config import ScheduleEventType
 
 
 @pytest.fixture(scope='module')

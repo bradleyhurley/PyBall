@@ -4,6 +4,6 @@ python:
 install:
   - pip install -e .[dev]
 script:
-  - "pytest --cov=./PyBall"
+  - "pytest --cov=./pyball"
   - "flake8 ."
   - "codecov"
