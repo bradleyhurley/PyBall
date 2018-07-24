@@ -1,8 +1,7 @@
-from pyball.models.base_model import BaseModel
+from dataclasses import dataclass, field
 
 
-class League(BaseModel):
-    _fields = {
-        'id': {'default_value': None, 'field_type': int},
-        'link': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class League:
+    id: int = field(default=None)
+    link: str = field(default=None)
