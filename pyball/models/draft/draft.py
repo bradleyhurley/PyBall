@@ -1,9 +1,18 @@
+from dataclasses import dataclass, field
+from typing import List
+
 from pyball.models.draft.round import Round
-from pyball.models import BaseModel
 
 
-class Draft(BaseModel):
-    _fields = {
-        'draftYear': {'default_value': None, 'field_type': int},
-        'rounds': {'default_value': [], 'field_type': [Round]},
-    }
+@dataclass
+class Draft:
+    draftYear: int = field(default=None)
+    rounds: List[Round] = field(default=None)
+
+    def __post_init__(self):
+        if self.rounds and isinstance(self.rounds[0], dict):
+            self.rounds = [
+                Round(**round)
+                for round
+                in self.rounds
+            ]

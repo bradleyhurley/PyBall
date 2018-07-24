@@ -1,11 +1,10 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass, field
 
 
-class School(BaseModel):
-    _fields = {
-        'name': {'default_value': None, 'field_type': str},
-        'schoolClass': {'default_value': None, 'field_type': str},
-        'city': {'default_value': None, 'field_type': str},
-        'country': {'default_value': None, 'field_type': str},
-        'state': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class School:
+    name: str = field(default=None)
+    schoolClass: str = field(default=None)
+    city: str = field(default=None)
+    country: str = field(default=None)
+    state: str = field(default=None)
