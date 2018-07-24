@@ -7,6 +7,7 @@ from pyball.models.draft.pick import Pick
 @dataclass
 class Round:
     roundNumber: int = None
+    round: int = None
     picks: List[Union[Pick, Dict[str, Any]]] = field(default_factory=list)
 
     def __post_init__(self):

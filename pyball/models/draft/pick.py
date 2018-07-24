@@ -3,7 +3,8 @@ from typing import Union, Dict, Any
 
 from pyball.models.draft.home import Home
 from pyball.models.draft.school import School
-from pyball.models.draft.person import Person
+from pyball.models.person import Person
+from pyball.models.generic_team import Team
 
 
 @dataclass
@@ -20,6 +21,11 @@ class Pick:
     photoFlag: bool = None
     school: Union[School, Dict[str, Any]] = field(default_factory=dict)
     comments: str = None
+    blurb: str = None
+    headshotLink: str = None
+    team: Union[Team, Dict[str, Any]] = field(default_factory=dict)
+    isDrafted: bool = None
+    isPass: bool = None
 
     def __post_init__(self):
         self.person = Person(**self.person)

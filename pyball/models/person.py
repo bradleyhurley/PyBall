@@ -42,6 +42,7 @@ class Person:
     pronunciation: str = None
     strikeZoneTop: float = None
     strikeZoneBottom: float = None
+    nameTitle: str = None
 
     def __post_init__(self):
         self.pitchHand = PitchHand(**self.pitchHand)

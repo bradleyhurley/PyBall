@@ -6,7 +6,7 @@ from pyball.models.draft import Round
 from pyball.models.draft import Pick
 from pyball.models.draft import Home
 from pyball.models.draft import School
-from pyball.models.draft import Person
+from pyball.models import Person
 
 from pyball.exceptions import BadRequestError, NotFound
 from pyball.constants import BASE_URL

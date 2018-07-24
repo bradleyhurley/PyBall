@@ -3,7 +3,8 @@ from typing import Union, Dict, Any
 
 from pyball.models.draft.home import Home
 from pyball.models.draft.school import School
-from pyball.models.draft.person import Person
+from pyball.models.person import Person
+from pyball.models.generic_team import Team
 
 
 @dataclass
@@ -20,8 +21,14 @@ class Prospect:
     comments: str = None
     person: Union[Person, Dict[str, Any]] = field(default_factory=dict)
     photoFlag: bool = None
+    blurb: str = None
+    headshotLink: str = None
+    isDrafted: bool = None
+    currentAge: int = None
+    team: Union[Team, Dict[str, Any]] = field(default_factory=dict)
 
     def __post_init__(self):
         self.person = Person(**self.person)
         self.home = Home(**self.home)
         self.school = School(**self.school)
+        self.team = Team(**self.team)
