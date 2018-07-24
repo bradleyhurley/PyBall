@@ -34,5 +34,5 @@ class BaseModel(metaclass=BaseModelType):
 
         extra_fields = kwargs.keys() - self._fields.keys()
         if extra_fields:
-            self.log.warn("Extra fields found: {}. Upgrade PyBall to access new data fields."
-                          .format(', '.join(extra_fields)))
+            self.log.warning("Extra fields found: {}. Upgrade PyBall to access new data fields."
+                             .format(', '.join(extra_fields)))

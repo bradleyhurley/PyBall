@@ -10,7 +10,7 @@ from .line_score import LineScore
 from .offense import Offense
 from .person import Person
 from .pitch_hand import PitchHand
-from .primary_position import PrimaryPostion
+from .primary_position import PrimaryPosition
 from .sport import Sport
 from .springLeague import SpringLeague
 from .generic_team import Team

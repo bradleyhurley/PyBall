@@ -1,7 +1,7 @@
 from pyball.models import BaseModel
 from pyball.models.pitch_hand import PitchHand
 from pyball.models.bat_side import BatSide
-from pyball.models.primary_position import PrimaryPostion
+from pyball.models.primary_position import PrimaryPosition
 
 
 class Person(BaseModel):
@@ -13,7 +13,7 @@ class Person(BaseModel):
         'lastName': {'default_value': None, 'field_type': str},
         'birthDate': {'default_value': None, 'field_type': str},
         'birthCountry': {'default_value': None, 'field_type': str},
-        'primaryPosition': {'default_value': {}, 'field_type': PrimaryPostion},
+        'primaryPosition': {'default_value': {}, 'field_type': PrimaryPosition},
         'batSide': {'default_value': {}, 'field_type': BatSide},
         'pitchHand': {'default_value': {}, 'field_type': PitchHand},
         'nameSlug': {'default_value': None, 'field_type': str},
