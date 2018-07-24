@@ -1,8 +1,8 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 
 @dataclass
 class Venue:
-    id: int
-    link: str
-    name: str
+    id: int = field(default=None)
+    link: str = field(default=None)
+    name: str = field(default=None)
