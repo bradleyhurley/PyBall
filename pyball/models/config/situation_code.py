@@ -1,13 +1,12 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass, field
 
 
-class SituationCode(BaseModel):
-    _fields = {
-        'code': {'default_value': None, 'field_type': str},
-        'sortOrder': {'default_value': None, 'field_type': int},
-        'navigationMenu': {'default_value': None, 'field_type': str},
-        'description': {'default_value': None, 'field_type': str},
-        'team': {'default_value': None, 'field_type': bool},
-        'batting': {'default_value': None, 'field_type': bool},
-        'fielding': {'default_value': None, 'field_type': bool},
-    }
+@dataclass
+class SituationCode:
+    code: str = field(default=None)
+    sortOrder: int = field(default=None)
+    navigationMenu: str = field(default=None)
+    description: str = field(default=None)
+    team: bool = field(default=None)
+    batting: bool = field(default=None)
+    fielding: bool = field(default=None)

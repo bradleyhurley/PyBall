@@ -1,15 +1,15 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass, field
 
 
-class Position(BaseModel):
-    _fields = {
-        'shortName': {'default_value': None, 'field_type': str},
-        'fullName': {'default_value': None, 'field_type': str},
-        'abbrev': {'default_value': None, 'field_type': str},
-        'code': {'default_value': None, 'field_type': str},
-        'type': {'default_value': None, 'field_type': str},
-        'outfield': {'default_value': None, 'field_type': bool},
-        'pitcher': {'default_value': None, 'field_type': bool},
-        'fielder': {'default_value': None, 'field_type': bool},
-        'displayName': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class Position:
+    shortName: str = field(default=None)
+    fullName: str = field(default=None)
+    abbrev: str = field(default=None)
+    code: str = field(default=None)
+    type: str = field(default=None)
+    outfield: bool = field(default=None)
+    pitcher: bool = field(default=None)
+    fielder: bool = field(default=None)
+    displayName: str = field(default=None)
+    formalName: str = field(default=None)

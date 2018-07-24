@@ -1,12 +1,11 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass, field
 
 
-class GameStatus(BaseModel):
-    _fields = {
-        'abstractGameState': {'default_value': None, 'field_type': str},
-        'codedGameState': {'default_value': None, 'field_type': str},
-        'detailedState': {'default_value': None, 'field_type': str},
-        'statusCode': {'default_value': None, 'field_type': int},
-        'reason': {'default_value': None, 'field_type': int},
-        'abstractGameCode': {'default_value': None, 'field_type': int},
-    }
+@dataclass
+class GameStatus:
+    abstractGameState: str = field(default=None)
+    codedGameState: str = field(default=None)
+    detailedState: str = field(default=None)
+    statusCode: int = field(default=None)
+    reason: int = field(default=None)
+    abstractGameCode: int = field(default=None)

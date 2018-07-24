@@ -1,8 +1,7 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass, field
 
 
-class StandingType(BaseModel):
-    _fields = {
-        'name': {'default_value': None, 'field_type': str},
-        'description': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class StandingType:
+    name: str = field(default=None)
+    description: str = field(default=None)

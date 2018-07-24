@@ -1,8 +1,7 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass, field
 
 
-class ValidSport(BaseModel):
-    _fields = {
-        'name': {'default_value': None, 'field_type': str},
-        'explictModeOn': {'default_value': None, 'field_type': bool},
-    }
+@dataclass
+class ValidSport:
+    name: str = field(default=None)
+    explictModeOn: bool = field(default=None)

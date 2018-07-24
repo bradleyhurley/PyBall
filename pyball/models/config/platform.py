@@ -1,8 +1,7 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass, field
 
 
-class Platform(BaseModel):
-    _fields = {
-        'platformCode': {'default_value': None, 'field_type': str},
-        'platformDescription': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class Platform:
+    platformCode: str = field(default=None)
+    platformDescription: str = field(default=None)

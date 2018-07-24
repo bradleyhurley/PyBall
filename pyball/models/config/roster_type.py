@@ -1,9 +1,8 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass, field
 
 
-class RosterType(BaseModel):
-    _fields = {
-        'description': {'default_value': None, 'field_type': str},
-        'lookupName': {'default_value': None, 'field_type': str},
-        'parameter': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class RosterType:
+    description: str = field(default=None)
+    lookupName: str = field(default=None)
+    parameter: str = field(default=None)
