@@ -1,13 +1,18 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass
+from typing import Union, Dict, Any
+
 from .person import Person
 from .status import Status
 
 
-class Player(BaseModel):
-    _fields = {
-        'person': {'default_value': {}, 'field_type': Person},
-        'jerseyNumber': {'default_value': None, 'field_type': str},
-        'status': {'default_value': {}, 'field_type': Status},
-        'parentTeamId': {'default_value': None, 'field_type': int},
+@dataclass
+class Player:
+    person: Union[Person, Dict[str, Any]] = None
+    jerseyNumber: str = None
+    status: Union[Status, Dict[str, Any]] = None
+    parentTeamId: int = None
+    position: str = None
 
-    }
+    def __post_init__(self):
+        self.person = Person(**self.person)
+        self.status = Status(**self.status)

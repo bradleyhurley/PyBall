@@ -1,8 +1,7 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass
 
 
-class Status(BaseModel):
-    _fields = {
-        'code': {'default_value': None, 'field_type': str},
-        'description': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class Status:
+    code: str = None
+    description: str = None

@@ -26,6 +26,8 @@ class Pick:
     team: Union[Team, Dict[str, Any]] = field(default_factory=dict)
     isDrafted: bool = None
     isPass: bool = None
+    pickValue: str = None
+    signingBonus: str = None
 
     def __post_init__(self):
         self.person = Person(**self.person)

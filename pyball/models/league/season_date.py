@@ -1,8 +1,7 @@
-from pyball.models.base_model import BaseModel
+from dataclasses import dataclass
 
 
-class SeasonDate(BaseModel):
-    _fields = {
-        'regularSeasonStartDate': {'default_value': None, 'field_type': str},
-        'regularSeasonEndDate': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class SeasonDate:
+    regularSeasonStartDate: str = None
+    regularSeasonEndDate: str = None
