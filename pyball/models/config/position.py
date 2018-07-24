@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
 class Position:
-    shortName: str = field(default=None)
-    fullName: str = field(default=None)
-    abbrev: str = field(default=None)
-    code: str = field(default=None)
-    type: str = field(default=None)
-    outfield: bool = field(default=None)
-    pitcher: bool = field(default=None)
-    fielder: bool = field(default=None)
-    displayName: str = field(default=None)
-    formalName: str = field(default=None)
+    shortName: str = None
+    fullName: str = None
+    abbrev: str = None
+    code: str = None
+    type: str = None
+    outfield: bool = None
+    pitcher: bool = None
+    fielder: bool = None
+    displayName: str = None
+    formalName: str = None

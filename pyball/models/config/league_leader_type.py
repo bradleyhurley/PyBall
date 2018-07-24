@@ -1,19 +1,18 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union, Dict, Any
 
 from pyball.models.config.valid_sport import ValidSport
 
 
 @dataclass
 class LeagueLeaderType:
-    displayName: str = field(default=None)
-    hasMinimums: bool = field(default=None)
-    validSports: List[ValidSport] = field(default_factory=List)
+    displayName: str = None
+    hasMinimums: bool = None
+    validSports: List[Union[ValidSport, Dict[str, Any]]] = field(default_factory=list)
 
     def __post_init__(self):
-        if self.validSports and isinstance(self.validSports[0], dict):
-            self.validSports = [
-                ValidSport(**sport)
-                for sport
-                in self.validSports
-            ]
+        self.validSports = [
+            ValidSport(**sport)
+            for sport
+            in self.validSports
+        ]

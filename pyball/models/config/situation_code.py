@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
 class SituationCode:
-    code: str = field(default=None)
-    sortOrder: int = field(default=None)
-    navigationMenu: str = field(default=None)
-    description: str = field(default=None)
-    team: bool = field(default=None)
-    batting: bool = field(default=None)
-    fielding: bool = field(default=None)
+    code: str = None
+    sortOrder: int = None
+    navigationMenu: str = None
+    description: str = None
+    team: bool = None
+    batting: bool = None
+    fielding: bool = None

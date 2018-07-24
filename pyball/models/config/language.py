@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
 class Language:
-    name: str = field(default=None)
-    languageCode: str = field(default=None)
-    locale: str = field(default=None)
+    name: str = None
+    languageCode: str = None
+    locale: str = None

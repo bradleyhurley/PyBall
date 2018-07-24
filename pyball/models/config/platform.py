@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
 class Platform:
-    platformCode: str = field(default=None)
-    platformDescription: str = field(default=None)
+    platformCode: str = None
+    platformDescription: str = None

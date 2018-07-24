@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
 class ScheduleEventType:
-    code: str = field(default=None)
-    name: str = field(default=None)
+    code: str = None
+    name: str = None

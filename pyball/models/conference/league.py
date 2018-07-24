@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
 class League:
-    id: int = field(default=None)
-    link: str = field(default=None)
+    id: int = None
+    link: str = None

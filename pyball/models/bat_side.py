@@ -3,5 +3,5 @@ from dataclasses import dataclass
 
 @dataclass
 class BatSide:
-    code: int
-    description: str
+    code: int = None
+    description: str = None

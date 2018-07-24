@@ -1,18 +1,17 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union, Dict, Any
 
 from pyball.models.draft.pick import Pick
 
 
 @dataclass
 class Round:
-    roundNumber: int = field(default=None)
-    picks: List[Pick] = field(default=None)
+    roundNumber: int = None
+    picks: List[Union[Pick, Dict[str, Any]]] = field(default_factory=list)
 
     def __post_init__(self):
-        if self.picks and isinstance(self.picks[0], dict):
-            self.picks = [
-                Pick(**pick)
-                for pick
-                in self.picks
-            ]
+        self.picks = [
+            Pick(**pick)
+            for pick
+            in self.picks
+        ]

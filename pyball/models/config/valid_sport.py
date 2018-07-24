@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
 class ValidSport:
-    name: str = field(default=None)
-    explictModeOn: bool = field(default=None)
+    name: str = None
+    explictModeOn: bool = None

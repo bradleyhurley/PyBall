@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
 class Metric:
-    group: str = field(default=None)
-    name: str = field(default=None)
-    unit: str = field(default=None)
-    metricId: int = field(default=None)
+    group: str = None
+    name: str = None
+    unit: str = None
+    metricId: int = None

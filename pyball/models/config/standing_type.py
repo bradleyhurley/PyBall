@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
 class StandingType:
-    name: str = field(default=None)
-    description: str = field(default=None)
+    name: str = None
+    description: str = None

@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
 class GameType:
-    id: str = field(default=None)
-    description: str = field(default=None)
+    id: str = None
+    description: str = None

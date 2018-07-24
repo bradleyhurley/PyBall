@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from typing import Union, Dict, Any
 
 from pyball.models.pitch_hand import PitchHand
 from pyball.models.bat_side import BatSide
@@ -7,24 +8,19 @@ from pyball.models.primary_position import PrimaryPosition
 
 @dataclass
 class Person:
-    id: str = field(default=None)
-    fullName: str = field(default=None)
-    link: str = field(default=None)
-    firstName: str = field(default=None)
-    lastName: str = field(default=None)
-    birthDate: str = field(default=None)
-    birthCountry: str = field(default=None)
-    primaryPosition: PrimaryPosition = field(default=None)
-    batSide: BatSide = field(default=None)
-    pitchHand: PitchHand = field(default=None)
-    nameSlug: str = field(default=None)
+    id: str = None
+    fullName: str = None
+    link: str = None
+    firstName: str = None
+    lastName: str = None
+    birthDate: str = None
+    birthCountry: str = None
+    pitchHand: Union[PitchHand, Dict[str, Any]] = field(default_factory=dict)
+    primaryPosition: Union[PitchHand, Dict[str, Any]] = field(default_factory=dict)
+    batSide: Union[PitchHand, Dict[str, Any]] = field(default_factory=dict)
+    nameSlug: str = None
 
     def __post_init__(self):
-        if isinstance(self.pitchHand, dict):
-            self.pitchHand = PitchHand(**self.pitchHand)
-
-        if isinstance(self.primaryPosition, dict):
-            self.primaryPosition = PrimaryPosition(**self.primaryPosition)
-
-        if isinstance(self.batSide, dict):
-            self.batSide = BatSide(**self.batSide)
+        self.pitchHand = PitchHand(**self.pitchHand)
+        self.primaryPosition = PrimaryPosition(**self.primaryPosition)
+        self.batSide = BatSide(**self.batSide)

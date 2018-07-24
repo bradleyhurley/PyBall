@@ -1,6 +1,6 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
 class StatsType:
-    displayName: str = field(default=None)
+    displayName: str = None

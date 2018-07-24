@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
 class GameStatus:
-    abstractGameState: str = field(default=None)
-    codedGameState: str = field(default=None)
-    detailedState: str = field(default=None)
-    statusCode: int = field(default=None)
-    reason: int = field(default=None)
-    abstractGameCode: int = field(default=None)
+    abstractGameState: str = None
+    codedGameState: str = None
+    detailedState: str = None
+    statusCode: int = None
+    reason: int = None
+    abstractGameCode: int = None

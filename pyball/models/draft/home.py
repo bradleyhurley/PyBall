@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
 class Home:
-    city: str = field(default=None)
-    country: str = field(default=None)
-    state: str = field(default=None)
+    city: str = None
+    country: str = None
+    state: str = None
