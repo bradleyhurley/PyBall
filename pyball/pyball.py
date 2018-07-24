@@ -149,7 +149,7 @@ class PyBall:
     def get_draft_by_year(self, year=datetime.now().year - 1):
         url = "{0}/draft/{1}".format(BASE_URL, year)
         results = self._get(url)
-        return Draft(**results['drafts'][0])
+        return Draft(**results['drafts'])
 
     def get_draft_prospects_by_year(self, year=datetime.now().year - 1):
         url = "{0}/draft/prospects/{1}".format(BASE_URL, year)
