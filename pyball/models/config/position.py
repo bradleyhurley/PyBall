@@ -12,4 +12,4 @@ class Position:
     pitcher: bool = None
     fielder: bool = None
     displayName: str = None
-    formalName: str = None
+    formalName: str = None  # noqa: E701
