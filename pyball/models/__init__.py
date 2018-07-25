@@ -1,4 +1,3 @@
-from .base_model import BaseModel
 from .bat_side import BatSide
 from .defense import Defense
 from .division import Division
