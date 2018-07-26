@@ -35,6 +35,8 @@ from pyball.models import Sport
 from pyball.models.team import Coach
 from pyball.models.team import Player
 
+from pyball.models.game import BoxScore
+
 
 class PyBall:
     def __init__(self):
@@ -192,7 +194,7 @@ class PyBall:
         results = self._get(url)
         return [Sport(**sport) for sport in results['sports']]
 
-    def get_sport_by_id(self, sport_id: id) -> Sport:
+    def get_sport_by_id(self, sport_id: int) -> Sport:
         url = "{0}sports/{1}".format(BASE_URL, sport_id)
         results = self._get(url)
         return Sport(**results['sports'][0])
@@ -206,3 +208,8 @@ class PyBall:
         # url = "{0}seasons/{1}".format(BASE_URL, season_id)
         # results = self._get(url)
         raise NotImplementedError
+
+    def get_boxscore_by_id(self, game_id: int) -> BoxScore:
+        url = f"{BASE_URL}game/{game_id}/boxscore"
+        results = self._get(url)
+        return BoxScore(**results)

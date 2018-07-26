@@ -4,7 +4,10 @@
 [![codecov](https://codecov.io/gh/bradleyhurley/PyBall/branch/master/graph/badge.svg)](https://codecov.io/gh/bradleyhurley/PyBall)
 
 ## API Documentation:
-http://statsapi.mlb.com/docs/#
+
+The official docs page at http://statsapi.mlb.com/docs/# is currently down and has been for some time.
+There appears to be a version available at http://statsapi-default-elb-prod-876255662.us-east-1.elb.amazonaws.com/docs/.
+
 
 
 ```python

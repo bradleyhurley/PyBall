@@ -5,6 +5,7 @@ from pyball.models.sport import Sport
 from pyball.models.generic_league import League
 from pyball.models.venue import Venue
 from pyball.models.division import Division
+from pyball.models.springLeague import SpringLeague
 
 
 @dataclass
@@ -23,6 +24,7 @@ class Team:
     division: Union[Division, Dict[str, Any]] = field(default_factory=dict)
     sport: Union[Sport, Dict[str, Any]] = field(default_factory=dict)
     shortName: str = None
+    springLeague:  Union[SpringLeague, Dict[str, Any]] = field(default_factory=dict)
     active: bool = None
     parentOrgId: int = None
     parentOrgName: str = None
@@ -32,3 +34,4 @@ class Team:
         self.league = League(**self.league)
         self.division = Division(**self.division)
         self.sport = Sport(**self.sport)
+        self.springLeague = SpringLeague(**self.springLeague)
