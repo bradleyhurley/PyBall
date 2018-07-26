@@ -1,16 +1,21 @@
-from pyball.models.base_model import BaseModel
+from dataclasses import dataclass, field
+from typing import Union, Dict, Any
+
 from .league import League
 from .sport import Sport
 
 
-class Division(BaseModel):
-    _fields = {
-        'id': {'default_value': None, 'field_type': int},
-        'name': {'default_value': None, 'field_type': str},
-        'nameShort': {'default_value': None, 'field_type': str},
-        'link': {'default_value': None, 'field_type': str},
-        'abbreviation': {'default_value': None, 'field_type': str},
-        'league': {'default_value': {}, 'field_type': League},
-        'sport': {'default_value': {}, 'field_type': Sport},
-        'hasWildcard': {'default_value': None, 'field_type': bool},
-    }
+@dataclass
+class Division:
+    id: int = None
+    name: str = None
+    nameShort: str = None
+    link: str = None
+    abbreviation: str = None
+    league: Union[League, Dict[str, Any]] = field(default_factory=dict)
+    sport: Union[Sport, Dict[str, Any]] = field(default_factory=dict)
+    hasWildcard: bool = None
+
+    def __post_init__(self):
+        self.league = League(**self.league)
+        self.sport = Sport(**self.sport)

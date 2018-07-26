@@ -1,10 +1,9 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass
 
 
-class Metric(BaseModel):
-    _fields = {
-        'group': {'default_value': None, 'field_type': str},
-        'name': {'default_value': None, 'field_type': str},
-        'unit': {'default_value': None, 'field_type': str},
-        'metricId': {'default_value': None, 'field_type': int},
-    }
+@dataclass
+class Metric:
+    group: str = None
+    name: str = None
+    unit: str = None
+    metricId: int = None

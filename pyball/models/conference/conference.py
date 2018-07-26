@@ -1,16 +1,21 @@
-from pyball.models.base_model import BaseModel
+from dataclasses import dataclass, field
+from typing import Union, Dict, Any
+
 from .sport import Sport
 from .league import League
 
 
-class Conference(BaseModel):
-    _fields = {
-        'id': {'default_value': None, 'field_type': int},
-        'link': {'default_value': None, 'field_type': str},
-        'name': {'default_value': None, 'field_type': str},
-        'abbreviation': {'default_value': None, 'field_type': str},
-        'hasWildcard': {'default_value': None, 'field_type': bool},
-        'nameShort': {'default_value': None, 'field_type': str},
-        'league': {'default_value': {}, 'field_type': League},
-        'sport': {'default_value': {}, 'field_type': Sport},
-    }
+@dataclass
+class Conference:
+    id: int = None
+    link: str = None
+    name: str = None
+    abbreviation: str = None
+    hasWildcard: bool = None
+    nameShort: str = None
+    league: Union[League, Dict[str, Any]] = field(default_factory=dict)
+    sport: Union[Sport, Dict[str, Any]] = field(default_factory=dict)
+
+    def __post_init__(self):
+        self.league = League(**self.league)
+        self.sport = Sport(**self.sport)

@@ -1,7 +1,6 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass
 
 
-class StatsType(BaseModel):
-    _fields = {
-        'displayName': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class StatsType:
+    displayName: str = None

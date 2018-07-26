@@ -1,9 +1,8 @@
-from pyball.models.base_model import BaseModel
+from dataclasses import dataclass, field
 
 
-class Venue(BaseModel):
-    _fields = {
-        'id': {'default_value': None, 'field_type': int},
-        'link': {'default_value': None, 'field_type': str},
-        'name': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class Venue:
+    id: int = field(default=None)
+    link: str = field(default=None)
+    name: str = field(default=None)

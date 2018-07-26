@@ -5,7 +5,6 @@ from pyball.models import Sport
 from pyball.models import League
 from pyball.models import Venue
 from pyball.models import Division
-from pyball.models import SpringLeague
 
 
 @pytest.fixture(scope='module')
@@ -42,6 +41,5 @@ def test_get_teams_affiliates_returns_list_of_teams(test_get_team_affiliates):
     assert isinstance(test_get_team_affiliates[0].league, League)
     assert isinstance(test_get_team_affiliates[0].division, Division)
     assert isinstance(test_get_team_affiliates[0].sport, Sport)
-    assert isinstance(test_get_team_affiliates[0].springLeague, SpringLeague)
     assert isinstance(test_get_team_affiliates[0].active, bool)
     assert isinstance(test_get_team_affiliates[0].id, int)

@@ -1,10 +1,9 @@
-from pyball.models.base_model import BaseModel
+from dataclasses import dataclass
 
 
-class PrimaryPostion(BaseModel):
-    _fields = {
-        'code': {'default_value': None, 'field_type': str},
-        'name': {'default_value': None, 'field_type': str},
-        'type': {'default_value': None, 'field_type': str},
-        'abbreviation': {'default_value': None, 'field_type': str},
-    }
+@dataclass(order=False)
+class PrimaryPosition:
+    code: str = None
+    name: str = None
+    type: str = None
+    abbreviation: str = None

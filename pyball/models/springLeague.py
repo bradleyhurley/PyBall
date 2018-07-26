@@ -1,10 +1,9 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass
 
 
-class SpringLeague(BaseModel):
-    _fields = {
-        'id': {'default_value': None, 'field_type': int},
-        'link': {'default_value': None, 'field_type': str},
-        'name': {'default_value': None, 'field_type': str},
-        'abbreviation': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class SpringLeague:
+    id: int = None
+    link: str = None
+    name: str = None
+    abbreviation: str = None

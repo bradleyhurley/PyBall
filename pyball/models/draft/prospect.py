@@ -1,21 +1,34 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass, field
+from typing import Union, Dict, Any
+
 from pyball.models.draft.home import Home
 from pyball.models.draft.school import School
-from pyball.models.draft.person import Person
+from pyball.models.person import Person
+from pyball.models.generic_team import Team
 
 
-class Prospect(BaseModel):
-    _fields = {
-        'bisPlayerId': {'default_value': None, 'field_type': int},
-        'draftPlayerId': {'default_value': None, 'field_type': int},
-        'pickRound': {'default_value': None, 'field_type': float},
-        'pickNumber': {'default_value': None, 'field_type': float},
-        'rank': {'default_value': None, 'field_type': float},
-        'pickedTeamCode': {'default_value': None, 'field_type': str},
-        'home': {'default_value': {}, 'field_type': Home},
-        'scoutingReport': {'default_value': None, 'field_type': str},
-        'school': {'default_value': {}, 'field_type': School},
-        'comments': {'default_value': None, 'field_type': str},
-        'person': {'default_value': {}, 'field_type': Person},
-        'photoFlag': {'default_value': None, 'field_type': bool},
-    }
+@dataclass
+class Prospect:
+    bisPlayerId: int = None
+    draftPlayerId: int = None
+    pickRound: float = None
+    pickNumber: float = None
+    rank: float = None
+    pickedTeamCode: str = None
+    home: Union[Home, Dict[str, Any]] = field(default_factory=dict)
+    scoutingReport: str = None
+    school: Union[School, Dict[str, Any]] = field(default_factory=dict)
+    comments: str = None
+    person: Union[Person, Dict[str, Any]] = field(default_factory=dict)
+    photoFlag: bool = None
+    blurb: str = None
+    headshotLink: str = None
+    isDrafted: bool = None
+    currentAge: int = None
+    team: Union[Team, Dict[str, Any]] = field(default_factory=dict)
+
+    def __post_init__(self):
+        self.person = Person(**self.person)
+        self.home = Home(**self.home)
+        self.school = School(**self.school)
+        self.team = Team(**self.team)

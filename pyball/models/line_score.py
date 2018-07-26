@@ -1,9 +1,8 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass
 
 
-class LineScore(BaseModel):
-    _fields = {
-        'runs': {'default_value': None, 'field_type': int},
-        'hits': {'default_value': None, 'field_type': int},
-        'errors': {'default_value': None, 'field_type': int},
-    }
+@dataclass
+class LineScore:
+    runs: int = None
+    hits: int = None
+    errors: int = None

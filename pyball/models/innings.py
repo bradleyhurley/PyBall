@@ -1,8 +1,12 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass, field
+from typing import Union, Dict, Any
+
 from pyball.models.inning import Inning
 
 
-class Innings(BaseModel):
-    _fields = {
-        'inning': {'default_value': {}, 'field_type': Inning},
-    }
+@dataclass
+class Innings:
+    inning: Union[Inning, Dict[str, Any]] = field(default_factory=dict)
+
+    def __post_init__(self):
+        self.inning = Inning(**self.inning)

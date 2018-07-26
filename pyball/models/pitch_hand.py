@@ -1,8 +1,7 @@
-from pyball.models.base_model import BaseModel
+from dataclasses import dataclass
 
 
-class PitchHand(BaseModel):
-    _fields = {
-        'code': {'default_value': None, 'field_type': str},
-        'description': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class PitchHand:
+    code: str = None
+    description: str = None

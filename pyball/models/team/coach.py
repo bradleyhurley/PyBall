@@ -1,11 +1,15 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass
+from typing import Union, Dict, Any
+
 from .person import Person
 
 
-class Coach(BaseModel):
-    _fields = {
-        'person': {'default_value': {}, 'field_type': Person},
-        'jerseyNumber': {'default_value': None, 'field_type': str},
-        'job': {'default_value': None, 'field_type': str},
-        'jobId': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class Coach:
+    person: Union[Person, Dict[str, Any]] = None
+    jerseyNumber: str = None
+    job: str = None
+    jobId: str = None
+
+    def __post_init__(self):
+        self.person = Person(**self.person)

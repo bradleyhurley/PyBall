@@ -1,39 +1,50 @@
-from pyball.models.base_model import BaseModel
+from dataclasses import dataclass, field
+from typing import Union, Dict, Any
+
 from pyball.models.pitch_hand import PitchHand
 from pyball.models.bat_side import BatSide
-from pyball.models.primary_position import PrimaryPostion
+from pyball.models.primary_position import PrimaryPosition
 
 
-class Person(BaseModel):
-    _fields = {
-        'id': {'default_value': None, 'field_type': int},
-        'fullName': {'default_value': None, 'field_type': str},
-        'link': {'default_value': None, 'field_type': str},
-        'firstName': {'default_value': None, 'field_type': str},
-        'lastName': {'default_value': None, 'field_type': str},
-        'primaryNumber': {'default_value': None, 'field_type': str},
-        'birthDate': {'default_value': None, 'field_type': str},
-        'currentAge': {'default_value': None, 'field_type': int},
-        'birthCity': {'default_value': None, 'field_type': str},
-        'birthStateProvince': {'default_value': None, 'field_type': str},
-        'height': {'default_value': None, 'field_type': str},
-        'weight': {'default_value': None, 'field_type': int},
-        'active': {'default_value': None, 'field_type': bool},
-        'useName': {'default_value': None, 'field_type': str},
-        'middleName': {'default_value': None, 'field_type': str},
-        'boxscoreName': {'default_value': None, 'field_type': str},
-        'nickName': {'default_value': None, 'field_type': str},
-        'draftYear': {'default_value': None, 'field_type': int},
-        'mlbDebutDate': {'default_value': None, 'field_type': str},
-        'nameFirstLast': {'default_value': None, 'field_type': str},
-        'nameSlug': {'default_value': None, 'field_type': str},
-        'firstLastName': {'default_value': None, 'field_type': str},
-        'lastFirstName': {'default_value': None, 'field_type': str},
-        'lastInitName': {'default_value': None, 'field_type': str},
-        'initLastName': {'default_value': None, 'field_type': str},
-        'fullFMLName': {'default_value': None, 'field_type': str},
-        'fullLFMName': {'default_value': None, 'field_type': str},
-        'pitchHand': {'default_value': {}, 'field_type': PitchHand},
-        'primaryPosition': {'default_value': {}, 'field_type': PrimaryPostion},
-        'batSide': {'default_value': {}, 'field_type': BatSide},
-    }
+@dataclass
+class Person:
+    id: int = None
+    fullName: str = None
+    link: str = None
+    firstName: str = None
+    lastName: str = None
+    primaryNumber: str = None
+    birthDate: str = None
+    currentAge: int = None
+    birthCity: str = None
+    birthStateProvince: str = None
+    height: str = None
+    weight: int = None
+    active: bool = None
+    useName: str = None
+    middleName: str = None
+    boxscoreName: str = None
+    nickName: str = None
+    draftYear: int = None
+    mlbDebutDate: str = None
+    nameFirstLast: str = None
+    nameSlug: str = None
+    firstLastName: str = None
+    lastFirstName: str = None
+    lastInitName: str = None
+    initLastName: str = None
+    fullFMLName: str = None
+    fullLFMName: str = None
+    pitchHand: Union[PitchHand, Dict[str, Any]] = field(default_factory=dict)
+    primaryPosition: Union[PitchHand, Dict[str, Any]] = field(default_factory=dict)
+    batSide: Union[PitchHand, Dict[str, Any]] = field(default_factory=dict)
+    birthCountry: str = None
+    pronunciation: str = None
+    strikeZoneTop: float = None
+    strikeZoneBottom: float = None
+    nameTitle: str = None
+
+    def __post_init__(self):
+        self.pitchHand = PitchHand(**self.pitchHand)
+        self.primaryPosition = PrimaryPosition(**self.primaryPosition)
+        self.batSide = BatSide(**self.batSide)

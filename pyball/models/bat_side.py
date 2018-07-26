@@ -1,8 +1,7 @@
-from pyball.models.base_model import BaseModel
+from dataclasses import dataclass
 
 
-class BatSide(BaseModel):
-    _fields = {
-        'code': {'default_value': None, 'field_type': int},
-        'description': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class BatSide:
+    code: int = None
+    description: str = None

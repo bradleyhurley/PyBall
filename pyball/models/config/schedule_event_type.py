@@ -1,8 +1,7 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass
 
 
-class ScheduleEventType(BaseModel):
-    _fields = {
-        'code': {'default_value': None, 'field_type': str},
-        'name': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class ScheduleEventType:
+    code: str = None
+    name: str = None

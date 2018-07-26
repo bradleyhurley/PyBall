@@ -1,22 +1,27 @@
-from pyball.models.base_model import BaseModel
+from dataclasses import dataclass, field
+from typing import Union, Dict, Any
+
 from pyball.models.league import SeasonDate
 from pyball.models.sport import Sport
 
 
-class League(BaseModel):
-    _fields = {
-        'id': {'default_value': None, 'field_type': int},
-        'name': {'default_value': None, 'field_type': str},
-        'link': {'default_value': None, 'field_type': str},
-        'abbreviation': {'default_value': None, 'field_type': str},
-        'seasonState':  {'default_value': None, 'field_type': str},
-        'hasWildCard': {'default_value': None, 'field_type': bool},
-        'hasSplitSeason': {'default_value': None, 'field_type': bool},
-        'hasPlayoffPoints': {'default_value': None, 'field_type': bool},
-        'numTeams': {'default_value': None, 'field_type': int},
-        'seasonDateInfo': {'default_value': {}, 'field_type': SeasonDate},
-        'orgCode': {'default_value': None, 'field_type': str},
-        'conferencesInUse': {'default_value': None, 'field_type': bool},
-        'divisionsInUse': {'default_value': None, 'field_type': bool},
-        'sport': {'default_value': {}, 'field_type': Sport}
-    }
+@dataclass
+class League:
+    id: int = None
+    name: str = None
+    link: str = None
+    abbreviation: str = None
+    seasonState: str = None
+    hasWildCard: bool = None
+    hasSplitSeason: bool = None
+    hasPlayoffPoints: bool = None
+    numTeams: int = None
+    seasonDateInfo: Union[SeasonDate, Dict[str, Any]] = field(default_factory=dict)
+    orgCode: str = None
+    conferencesInUse: bool = None
+    divisionsInUse: bool = None
+    sport: Union[Sport, Dict[str, Any]] = field(default_factory=dict)
+
+    def __post_init__(self):
+        self.seasonDateInfo = SeasonDate(**self.seasonDateInfo)
+        self.sport = Sport(**self.sport)

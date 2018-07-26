@@ -1,9 +1,8 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass
 
 
-class Division(BaseModel):
-        _fields = {
-            'id': {'default_value': None, 'field_type': int},
-            'name': {'default_value': None, 'field_type': str},
-            'link': {'default_value': None, 'field_type': str},
-        }
+@dataclass
+class Division:
+    id: int = None
+    name: str = None
+    link: str = None

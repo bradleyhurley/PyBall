@@ -1,9 +1,8 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass
 
 
-class Language(BaseModel):
-    _fields = {
-        'name': {'default_value': None, 'field_type': str},
-        'languageCode': {'default_value': None, 'field_type': str},
-        'locale': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class Language:
+    name: str = None
+    languageCode: str = None
+    locale: str = None

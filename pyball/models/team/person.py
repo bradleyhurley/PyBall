@@ -1,9 +1,8 @@
-from pyball.models import BaseModel
+from dataclasses import dataclass
 
 
-class Person(BaseModel):
-    _fields = {
-        'id': {'default_value': None, 'field_type': int},
-        'link': {'default_value': None, 'field_type': str},
-        'fullName': {'default_value': None, 'field_type': str},
-    }
+@dataclass
+class Person:
+    id: int = None
+    link: str = None
+    fullName: str = None

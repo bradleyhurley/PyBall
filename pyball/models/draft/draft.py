@@ -1,9 +1,17 @@
+from dataclasses import dataclass, field
+from typing import List, Union, Dict, Any
+
 from pyball.models.draft.round import Round
-from pyball.models import BaseModel
 
 
-class Draft(BaseModel):
-    _fields = {
-        'draftYear': {'default_value': None, 'field_type': int},
-        'rounds': {'default_value': [], 'field_type': [Round]},
-    }
+@dataclass
+class Draft:
+    draftYear: int = None
+    rounds: List[Union[Round, Dict[str, Any]]] = field(default_factory=list)
+
+    def __post_init__(self):
+        self.rounds = [
+            Round(**r)
+            for r
+            in self.rounds
+        ]
