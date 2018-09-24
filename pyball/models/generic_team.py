@@ -26,9 +26,11 @@ class Team:
     active: bool = None
     parentOrgId: int = None
     parentOrgName: str = None
+    springLeague: Union[League, Dict[str, Any]] = field(default_factory=dict)
 
     def __post_init__(self):
         self.venue = Venue(**self.venue)
         self.league = League(**self.league)
         self.division = Division(**self.division)
         self.sport = Sport(**self.sport)
+        self.springLeague = League(**self.springLeague)
