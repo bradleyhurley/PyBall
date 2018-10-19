@@ -30,6 +30,7 @@ from pyball.models.conference import Conference
 
 from pyball.models.draft import Draft
 from pyball.models.draft import Prospect
+from pyball.models.draft import Pick
 from pyball.models import Team
 from pyball.models import Sport
 from pyball.models.team import Coach
@@ -145,6 +146,16 @@ class PyBall:
         url = "{0}/draft/{1}".format(BASE_URL, year)
         results = self._get(url)
         return Draft(**results['drafts'])
+
+    def get_latest_draftee_by_year(self, year: int=datetime.now().year - 1) -> Pick:
+        """
+        Insert year to return biographical and financial data for the most recent pick in the draft.
+        :param year: int
+        :return: Pick
+        """
+        url = "{0}/draft/{1}/latest".format(BASE_URL, year)
+        results = self._get(url)
+        return Pick(**results['pick'])
 
     def get_draft_prospects_by_year(self, year: int=datetime.now().year - 1) -> List[Prospect]:
         url = "{0}/draft/prospects/{1}".format(BASE_URL, year)

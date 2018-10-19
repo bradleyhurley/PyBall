@@ -33,3 +33,4 @@ class Pick:
         self.person = Person(**self.person)
         self.home = Home(**self.home)
         self.school = School(**self.school)
+        self.team = Team(**self.team)
