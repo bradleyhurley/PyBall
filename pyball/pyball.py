@@ -141,12 +141,6 @@ class PyBall:
         results = self._get(url)
         return Conference(**results['conferences'][0])
 
-    def get_draft(self):
-        raise NotImplementedError
-
-    def get_draft_prospects(self):
-        raise NotImplementedError
-
     def get_draft_by_year(self, year: int=datetime.now().year - 1) -> Draft:
         url = "{0}/draft/{1}".format(BASE_URL, year)
         results = self._get(url)
