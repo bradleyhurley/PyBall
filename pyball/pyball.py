@@ -142,12 +142,12 @@ class PyBall:
         results = self._get(url)
         return Conference(**results['conferences'][0])
 
-    def get_draft_by_year(self, year: int=datetime.now().year - 1) -> Draft:
+    def get_draft_by_year(self, year: int = datetime.now().year - 1) -> Draft:
         url = "{0}/draft/{1}".format(BASE_URL, year)
         results = self._get(url)
         return Draft(**results['drafts'])
 
-    def get_latest_draftee_by_year(self, year: int=datetime.now().year - 1) -> Pick:
+    def get_latest_draftee_by_year(self, year: int = datetime.now().year - 1) -> Pick:
         """
         Insert year to return biographical and financial data for the most recent pick in the draft.
         :param year: int
@@ -157,7 +157,7 @@ class PyBall:
         results = self._get(url)
         return Pick(**results['pick'])
 
-    def get_draft_prospects_by_year(self, year: int=datetime.now().year - 1) -> List[Prospect]:
+    def get_draft_prospects_by_year(self, year: int = datetime.now().year - 1) -> List[Prospect]:
         url = "{0}/draft/prospects/{1}".format(BASE_URL, year)
         results = self._get(url)
         return [Prospect(**prospect) for prospect in results['prospects']]
