@@ -21,6 +21,7 @@ class League:
     conferencesInUse: bool = None
     divisionsInUse: bool = None
     sport: Union[Sport, Dict[str, Any]] = field(default_factory=dict)
+    sortOrder: int = None
 
     def __post_init__(self):
         self.seasonDateInfo = SeasonDate(**self.seasonDateInfo)
