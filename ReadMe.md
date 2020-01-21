@@ -6,6 +6,7 @@
 ## API Documentation:
 http://statsapi.mlb.com/docs/#
 
+If anyone has any connection to MLB and can get access to the API documentation I would really appreciate it.
 
 ```python
 import pyball
