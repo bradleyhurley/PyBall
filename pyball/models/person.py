@@ -43,6 +43,13 @@ class Person:
     strikeZoneTop: float = None
     strikeZoneBottom: float = None
     nameTitle: str = None
+    gender: str = None
+    isPlayer: bool = None
+    isVerified: bool = None
+    nameMatrilineal: str = None
+    deathDate: str = None
+    deathCity: str = None
+    deathCountry: str = None
 
     def __post_init__(self):
         self.pitchHand = PitchHand(**self.pitchHand)
