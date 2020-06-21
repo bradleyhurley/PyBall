@@ -1,5 +1,5 @@
 import requests
-from datetime import datetime
+from datetime import datetime, date
 from typing import List, Dict, Any, Union
 
 from pyball.constants import BASE_URL
@@ -35,6 +35,7 @@ from pyball.models import Team
 from pyball.models import Sport
 from pyball.models.team import Coach
 from pyball.models.team import Player
+from pyball.models.schedule import Schedule
 
 
 class PyBall:
@@ -201,6 +202,17 @@ class PyBall:
         url = "{0}sports/{1}".format(BASE_URL, sport_id)
         results = self._get(url)
         return Sport(**results['sports'][0])
+
+    def get_schedule(self, start_date: date = date.today(), end_date: date = date.today(),
+                     team_id: int = None, game_type: str = None):
+        url = "{0}schedule?sportId=1&startDate={1}&endDate={2}".format(BASE_URL,
+                                                                       start_date, end_date)
+        if team_id:
+            url = url + "&teamId={0}".format(team_id)
+        if game_type:
+            url = url + "&gameType={0}".format(game_type)
+        results = self._get(url)
+        return [Schedule(**schedule) for schedule in results['dates']]
 
     def get_seasons(self):
         # url = "{0}seasons/".format(BASE_URL)
