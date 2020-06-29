@@ -9,8 +9,7 @@ from pyball.models.draft import School
 from pyball.models.generic_team import Team
 from pyball.models import Person
 
-from pyball.exceptions import BadRequestError, NotFound
-from pyball.constants import BASE_URL
+from pyball.exceptions import BadRequestError
 
 
 @pytest.fixture(scope='module')

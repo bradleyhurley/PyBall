@@ -13,3 +13,4 @@ class Position:
     fielder: bool = None
     displayName: str = None
     formalName: str = None  # noqa: E701
+    gamePosition: bool = None

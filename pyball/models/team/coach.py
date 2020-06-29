@@ -10,6 +10,7 @@ class Coach:
     jerseyNumber: str = None
     job: str = None
     jobId: str = None
+    title: str = None
 
     def __post_init__(self):
         self.person = Person(**self.person)
