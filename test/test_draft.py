@@ -60,14 +60,3 @@ def test_bad_draft_year():
     with pytest.raises(BadRequestError):
         pyball.get_draft_by_year("BadYear")
 
-
-def test_get_not_found_draft():
-    pyball = PyBall()
-    with pytest.raises(NotFound):
-        pyball._get("{}/draft".format(BASE_URL))
-
-
-def test_get_not_found_draft_prospects():
-    pyball = PyBall()
-    with pytest.raises(NotFound):
-        pyball._get("{}/draft/prospects".format(BASE_URL))
