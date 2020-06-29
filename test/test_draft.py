@@ -9,8 +9,7 @@ from pyball.models.draft import School
 from pyball.models.generic_team import Team
 from pyball.models import Person
 
-from pyball.exceptions import BadRequestError, NotFound
-from pyball.constants import BASE_URL
+from pyball.exceptions import BadRequestError
 
 
 @pytest.fixture(scope='module')
@@ -59,15 +58,3 @@ def test_bad_draft_year():
     pyball = PyBall()
     with pytest.raises(BadRequestError):
         pyball.get_draft_by_year("BadYear")
-
-
-def test_get_not_found_draft():
-    pyball = PyBall()
-    with pytest.raises(NotFound):
-        pyball._get("{}/draft".format(BASE_URL))
-
-
-def test_get_not_found_draft_prospects():
-    pyball = PyBall()
-    with pytest.raises(NotFound):
-        pyball._get("{}/draft/prospects".format(BASE_URL))
